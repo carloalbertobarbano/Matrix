@@ -7,22 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		845E6AD51C27359300CF7619 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845E6AD41C27359300CF7619 /* SDL2_image.framework */; };
-		845E6AD91C27367E00CF7619 /* MouseListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 845E6AD71C27367E00CF7619 /* MouseListener.cpp */; };
-		845E6ADA1C27367E00CF7619 /* Primitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 845E6AD81C27367E00CF7619 /* Primitives.cpp */; };
-		845E6AE21C2736B100CF7619 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 845E6ADB1C2736B100CF7619 /* Camera.cpp */; };
-		845E6AE31C2736B100CF7619 /* FrameBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 845E6ADC1C2736B100CF7619 /* FrameBuffer.cpp */; };
-		845E6AE41C2736B100CF7619 /* RenderPipeline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 845E6ADD1C2736B100CF7619 /* RenderPipeline.cpp */; };
-		845E6AE51C2736B100CF7619 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 845E6ADE1C2736B100CF7619 /* Shader.cpp */; };
-		845E6AE61C2736B100CF7619 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 845E6ADF1C2736B100CF7619 /* Texture.cpp */; };
-		845E6AE71C2736B100CF7619 /* TextureCube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 845E6AE01C2736B100CF7619 /* TextureCube.cpp */; };
-		845E6AE81C2736B100CF7619 /* VAO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 845E6AE11C2736B100CF7619 /* VAO.cpp */; };
+		846C44F81C31D42600028CB6 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846C44F51C31D42600028CB6 /* SDL2_image.framework */; };
+		846C44F91C31D42600028CB6 /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846C44F61C31D42600028CB6 /* SDL2_ttf.framework */; };
+		846C44FA1C31D42600028CB6 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846C44F71C31D42600028CB6 /* SDL2.framework */; };
+		846C45061C31D44300028CB6 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 846C44FB1C31D44300028CB6 /* Camera.cpp */; };
+		846C45071C31D44300028CB6 /* Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 846C44FC1C31D44300028CB6 /* Device.cpp */; };
+		846C45081C31D44300028CB6 /* FrameBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 846C44FD1C31D44300028CB6 /* FrameBuffer.cpp */; };
+		846C45091C31D44300028CB6 /* KeyboardEventListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 846C44FE1C31D44300028CB6 /* KeyboardEventListener.cpp */; };
+		846C450A1C31D44300028CB6 /* matrix_engine_internal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 846C44FF1C31D44300028CB6 /* matrix_engine_internal.cpp */; };
+		846C450B1C31D44300028CB6 /* MouseEventListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 846C45001C31D44300028CB6 /* MouseEventListener.cpp */; };
+		846C450C1C31D44300028CB6 /* RenderPipeline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 846C45011C31D44300028CB6 /* RenderPipeline.cpp */; };
+		846C450D1C31D44300028CB6 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 846C45021C31D44300028CB6 /* Shader.cpp */; };
+		846C450E1C31D44300028CB6 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 846C45031C31D44300028CB6 /* Texture.cpp */; };
+		846C450F1C31D44300028CB6 /* TextureCube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 846C45041C31D44300028CB6 /* TextureCube.cpp */; };
+		846C45101C31D44300028CB6 /* VAO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 846C45051C31D44300028CB6 /* VAO.cpp */; };
+		846C45131C31D45100028CB6 /* MouseListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 846C45111C31D45100028CB6 /* MouseListener.cpp */; };
+		846C45141C31D45100028CB6 /* Primitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 846C45121C31D45100028CB6 /* Primitives.cpp */; };
+		846C45161C31D4BF00028CB6 /* libassimp.3.1.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 846C45151C31D4BF00028CB6 /* libassimp.3.1.1.dylib */; };
 		84F54D031C216272003F124D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F54D021C216272003F124D /* main.cpp */; };
-		84F54D061C216537003F124D /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F54D051C216537003F124D /* SDL2.framework */; };
-		84F54D141C216662003F124D /* Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F54D101C216662003F124D /* Device.cpp */; };
-		84F54D151C216662003F124D /* KeyboardEventListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F54D111C216662003F124D /* KeyboardEventListener.cpp */; };
-		84F54D161C216662003F124D /* matrix_engine_internal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F54D121C216662003F124D /* matrix_engine_internal.cpp */; };
-		84F54D171C216662003F124D /* MouseEventListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F54D131C216662003F124D /* MouseEventListener.cpp */; };
 		84F54D191C216686003F124D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F54D181C216686003F124D /* OpenGL.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,24 +41,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		845E6AD41C27359300CF7619 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
-		845E6AD71C27367E00CF7619 /* MouseListener.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MouseListener.cpp; path = ../unit/MouseListener.cpp; sourceTree = "<group>"; };
-		845E6AD81C27367E00CF7619 /* Primitives.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Primitives.cpp; path = ../unit/Primitives.cpp; sourceTree = "<group>"; };
-		845E6ADB1C2736B100CF7619 /* Camera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Camera.cpp; path = ../Matrix/Camera.cpp; sourceTree = "<group>"; };
-		845E6ADC1C2736B100CF7619 /* FrameBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FrameBuffer.cpp; path = ../Matrix/FrameBuffer.cpp; sourceTree = "<group>"; };
-		845E6ADD1C2736B100CF7619 /* RenderPipeline.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = RenderPipeline.cpp; path = ../Matrix/RenderPipeline.cpp; sourceTree = "<group>"; };
-		845E6ADE1C2736B100CF7619 /* Shader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Shader.cpp; path = ../Matrix/Shader.cpp; sourceTree = "<group>"; };
-		845E6ADF1C2736B100CF7619 /* Texture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Texture.cpp; path = ../Matrix/Texture.cpp; sourceTree = "<group>"; };
-		845E6AE01C2736B100CF7619 /* TextureCube.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TextureCube.cpp; path = ../Matrix/TextureCube.cpp; sourceTree = "<group>"; };
-		845E6AE11C2736B100CF7619 /* VAO.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = VAO.cpp; path = ../Matrix/VAO.cpp; sourceTree = "<group>"; };
+		846C44F51C31D42600028CB6 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
+		846C44F61C31D42600028CB6 /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
+		846C44F71C31D42600028CB6 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		846C44FB1C31D44300028CB6 /* Camera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Camera.cpp; path = ../../MatrixEngine/Matrix/Camera.cpp; sourceTree = "<group>"; };
+		846C44FC1C31D44300028CB6 /* Device.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Device.cpp; path = ../../MatrixEngine/Matrix/Device.cpp; sourceTree = "<group>"; };
+		846C44FD1C31D44300028CB6 /* FrameBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FrameBuffer.cpp; path = ../../MatrixEngine/Matrix/FrameBuffer.cpp; sourceTree = "<group>"; };
+		846C44FE1C31D44300028CB6 /* KeyboardEventListener.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = KeyboardEventListener.cpp; path = ../../MatrixEngine/Matrix/KeyboardEventListener.cpp; sourceTree = "<group>"; };
+		846C44FF1C31D44300028CB6 /* matrix_engine_internal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = matrix_engine_internal.cpp; path = ../../MatrixEngine/Matrix/matrix_engine_internal.cpp; sourceTree = "<group>"; };
+		846C45001C31D44300028CB6 /* MouseEventListener.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MouseEventListener.cpp; path = ../../MatrixEngine/Matrix/MouseEventListener.cpp; sourceTree = "<group>"; };
+		846C45011C31D44300028CB6 /* RenderPipeline.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = RenderPipeline.cpp; path = ../../MatrixEngine/Matrix/RenderPipeline.cpp; sourceTree = "<group>"; };
+		846C45021C31D44300028CB6 /* Shader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Shader.cpp; path = ../../MatrixEngine/Matrix/Shader.cpp; sourceTree = "<group>"; };
+		846C45031C31D44300028CB6 /* Texture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Texture.cpp; path = ../../MatrixEngine/Matrix/Texture.cpp; sourceTree = "<group>"; };
+		846C45041C31D44300028CB6 /* TextureCube.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TextureCube.cpp; path = ../../MatrixEngine/Matrix/TextureCube.cpp; sourceTree = "<group>"; };
+		846C45051C31D44300028CB6 /* VAO.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = VAO.cpp; path = ../../MatrixEngine/Matrix/VAO.cpp; sourceTree = "<group>"; };
+		846C45111C31D45100028CB6 /* MouseListener.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MouseListener.cpp; path = ../../MatrixEngine/unit/MouseListener.cpp; sourceTree = "<group>"; };
+		846C45121C31D45100028CB6 /* Primitives.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Primitives.cpp; path = ../../MatrixEngine/unit/Primitives.cpp; sourceTree = "<group>"; };
+		846C45151C31D4BF00028CB6 /* libassimp.3.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libassimp.3.1.1.dylib; sourceTree = "<group>"; };
 		84F54CF81C21621D003F124D /* xcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcode; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F54D021C216272003F124D /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../main.cpp; sourceTree = "<group>"; };
-		84F54D041C21627B003F124D /* Matrix */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Matrix; path = ../Matrix; sourceTree = "<group>"; };
-		84F54D051C216537003F124D /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
-		84F54D101C216662003F124D /* Device.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Device.cpp; path = ../Matrix/Device.cpp; sourceTree = "<group>"; };
-		84F54D111C216662003F124D /* KeyboardEventListener.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = KeyboardEventListener.cpp; path = ../Matrix/KeyboardEventListener.cpp; sourceTree = "<group>"; };
-		84F54D121C216662003F124D /* matrix_engine_internal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = matrix_engine_internal.cpp; path = ../Matrix/matrix_engine_internal.cpp; sourceTree = "<group>"; };
-		84F54D131C216662003F124D /* MouseEventListener.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MouseEventListener.cpp; path = ../Matrix/MouseEventListener.cpp; sourceTree = "<group>"; };
 		84F54D181C216686003F124D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -65,9 +68,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				845E6AD51C27359300CF7619 /* SDL2_image.framework in Frameworks */,
+				846C44F81C31D42600028CB6 /* SDL2_image.framework in Frameworks */,
+				846C44F91C31D42600028CB6 /* SDL2_ttf.framework in Frameworks */,
+				846C45161C31D4BF00028CB6 /* libassimp.3.1.1.dylib in Frameworks */,
+				846C44FA1C31D42600028CB6 /* SDL2.framework in Frameworks */,
 				84F54D191C216686003F124D /* OpenGL.framework in Frameworks */,
-				84F54D061C216537003F124D /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,23 +82,24 @@
 		84F54CEF1C21621D003F124D = {
 			isa = PBXGroup;
 			children = (
-				845E6ADB1C2736B100CF7619 /* Camera.cpp */,
-				845E6ADC1C2736B100CF7619 /* FrameBuffer.cpp */,
-				845E6ADD1C2736B100CF7619 /* RenderPipeline.cpp */,
-				845E6ADE1C2736B100CF7619 /* Shader.cpp */,
-				845E6ADF1C2736B100CF7619 /* Texture.cpp */,
-				845E6AE01C2736B100CF7619 /* TextureCube.cpp */,
-				845E6AE11C2736B100CF7619 /* VAO.cpp */,
-				845E6AD71C27367E00CF7619 /* MouseListener.cpp */,
-				845E6AD81C27367E00CF7619 /* Primitives.cpp */,
-				845E6AD41C27359300CF7619 /* SDL2_image.framework */,
+				846C45151C31D4BF00028CB6 /* libassimp.3.1.1.dylib */,
+				846C45111C31D45100028CB6 /* MouseListener.cpp */,
+				846C45121C31D45100028CB6 /* Primitives.cpp */,
+				846C44FB1C31D44300028CB6 /* Camera.cpp */,
+				846C44FC1C31D44300028CB6 /* Device.cpp */,
+				846C44FD1C31D44300028CB6 /* FrameBuffer.cpp */,
+				846C44FE1C31D44300028CB6 /* KeyboardEventListener.cpp */,
+				846C44FF1C31D44300028CB6 /* matrix_engine_internal.cpp */,
+				846C45001C31D44300028CB6 /* MouseEventListener.cpp */,
+				846C45011C31D44300028CB6 /* RenderPipeline.cpp */,
+				846C45021C31D44300028CB6 /* Shader.cpp */,
+				846C45031C31D44300028CB6 /* Texture.cpp */,
+				846C45041C31D44300028CB6 /* TextureCube.cpp */,
+				846C45051C31D44300028CB6 /* VAO.cpp */,
+				846C44F51C31D42600028CB6 /* SDL2_image.framework */,
+				846C44F61C31D42600028CB6 /* SDL2_ttf.framework */,
+				846C44F71C31D42600028CB6 /* SDL2.framework */,
 				84F54D181C216686003F124D /* OpenGL.framework */,
-				84F54D101C216662003F124D /* Device.cpp */,
-				84F54D111C216662003F124D /* KeyboardEventListener.cpp */,
-				84F54D121C216662003F124D /* matrix_engine_internal.cpp */,
-				84F54D131C216662003F124D /* MouseEventListener.cpp */,
-				84F54D051C216537003F124D /* SDL2.framework */,
-				84F54D041C21627B003F124D /* Matrix */,
 				84F54D021C216272003F124D /* main.cpp */,
 				84F54CFA1C21621D003F124D /* xcode */,
 				84F54CF91C21621D003F124D /* Products */,
@@ -171,19 +177,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				845E6AE21C2736B100CF7619 /* Camera.cpp in Sources */,
-				845E6AE31C2736B100CF7619 /* FrameBuffer.cpp in Sources */,
-				845E6AE41C2736B100CF7619 /* RenderPipeline.cpp in Sources */,
-				845E6AE51C2736B100CF7619 /* Shader.cpp in Sources */,
-				845E6AE61C2736B100CF7619 /* Texture.cpp in Sources */,
-				845E6AE71C2736B100CF7619 /* TextureCube.cpp in Sources */,
-				845E6AE81C2736B100CF7619 /* VAO.cpp in Sources */,
-				845E6AD91C27367E00CF7619 /* MouseListener.cpp in Sources */,
-				845E6ADA1C27367E00CF7619 /* Primitives.cpp in Sources */,
-				84F54D141C216662003F124D /* Device.cpp in Sources */,
-				84F54D151C216662003F124D /* KeyboardEventListener.cpp in Sources */,
-				84F54D161C216662003F124D /* matrix_engine_internal.cpp in Sources */,
-				84F54D171C216662003F124D /* MouseEventListener.cpp in Sources */,
+				846C45131C31D45100028CB6 /* MouseListener.cpp in Sources */,
+				846C45141C31D45100028CB6 /* Primitives.cpp in Sources */,
+				846C45061C31D44300028CB6 /* Camera.cpp in Sources */,
+				846C45071C31D44300028CB6 /* Device.cpp in Sources */,
+				846C45081C31D44300028CB6 /* FrameBuffer.cpp in Sources */,
+				846C45091C31D44300028CB6 /* KeyboardEventListener.cpp in Sources */,
+				846C450A1C31D44300028CB6 /* matrix_engine_internal.cpp in Sources */,
+				846C450B1C31D44300028CB6 /* MouseEventListener.cpp in Sources */,
+				846C450C1C31D44300028CB6 /* RenderPipeline.cpp in Sources */,
+				846C450D1C31D44300028CB6 /* Shader.cpp in Sources */,
+				846C450E1C31D44300028CB6 /* Texture.cpp in Sources */,
+				846C450F1C31D44300028CB6 /* TextureCube.cpp in Sources */,
+				846C45101C31D44300028CB6 /* VAO.cpp in Sources */,
 				84F54D031C216272003F124D /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,7 +284,15 @@
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
-				HEADER_SEARCH_PATHS = "\"/Users/carloalberto/Documents/3rd party libraries\"";
+				HEADER_SEARCH_PATHS = (
+					"\"/Users/carloalberto/Documents/3rd party libraries\"",
+					/Users/carloalberto/Documents/XCodeProjects/Matrix/MatrixEngine,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -291,7 +305,15 @@
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
-				HEADER_SEARCH_PATHS = "\"/Users/carloalberto/Documents/3rd party libraries\"";
+				HEADER_SEARCH_PATHS = (
+					"\"/Users/carloalberto/Documents/3rd party libraries\"",
+					/Users/carloalberto/Documents/XCodeProjects/Matrix/MatrixEngine,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -12,6 +12,8 @@ using namespace MatrixEngine::Core;
 using namespace MatrixEngine::Graphics;
 
 int main(int argc, char **argv) {
+    std::cout << argv[0] << std::endl;
+    
 	int glMajorVersion = 3;
 	int glMinorVersion = 3;
 
