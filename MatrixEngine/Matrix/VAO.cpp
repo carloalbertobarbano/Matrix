@@ -38,7 +38,6 @@ void VAO::Construct(int buff_n)
 #endif
 #endif
 	
-
 	Bind();
 
 	glGenBuffers(buff_n,buffer);

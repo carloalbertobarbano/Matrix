@@ -20,29 +20,17 @@ static void validateShader(GLuint shader, const char* file = 0)
 
 static void validateProgram(GLuint program)
 {
-	const unsigned int BUFFER_SIZE = 512;
-	char buffer[BUFFER_SIZE];
-	memset(buffer, 0, BUFFER_SIZE);
-	GLsizei length = 0;
-
-	memset(buffer, 0, BUFFER_SIZE);
-	glGetProgramInfoLog(program, BUFFER_SIZE, &length, buffer);
-	if (length > 0)
-	{
-		std::stringstream m;
-		m << "Program " << program << " link error: " << buffer;
-		Log::WriteOnStream(m.str(), Log::error_stream);
-	}
-
-	glValidateProgram(program);
-	GLint status;
-	glGetProgramiv(program, GL_VALIDATE_STATUS, &status);
-	if (status == GL_FALSE)
-	{
-		std::stringstream m;
-		m << "Error validating shader " << program;
-		Log::WriteOnStream(m.str(), Log::error_stream);
-	}
+    GLint result = GL_FALSE;
+    int infoLogLength = 0;
+    
+    glGetProgramiv(program, GL_LINK_STATUS, &result);
+    glGetProgramiv(program, GL_INFO_LOG_LENGTH, &infoLogLength);
+    
+    if(infoLogLength > 0) {
+        std::vector<char> msg(infoLogLength + 1);
+        glGetProgramInfoLog(program, infoLogLength, NULL, &msg[0]);
+        Log::WriteOnStream(&msg[0], Log::error_stream);
+    }
 }
 
 /***************SHADER SOURCE ***********************/
@@ -85,18 +73,18 @@ void ShaderSource::InitWithSource(GLenum shader_type, const GLchar *source)
 	glShaderSource(shader_handle, 1, &source, 0);
 	glCompileShader(shader_handle);
 	Log::WriteOnStream("\tShader compiled\n", Log::log_stream);
-
-	char shader_info[512];
-	GLsizei errors = 0;
-
-	glGetShaderInfoLog(shader_handle, 512, &errors, shader_info);
-
-	if (errors > 0) {
-		std::stringstream m;
-		m << "Shader compile error: " << shader_info << std::endl;
-		Log::WriteOnStream(m.str(), Log::error_stream);
-	}
-
+    
+    GLint result = GL_FALSE;
+    int infoLogLength = 0;
+    
+    glGetShaderiv(shader_handle, GL_COMPILE_STATUS, &result);
+    glGetShaderiv(shader_handle, GL_INFO_LOG_LENGTH, &infoLogLength);
+    
+    if(infoLogLength > 0) {
+        std::vector<char> msg(infoLogLength + 1);
+        glGetShaderInfoLog(shader_handle, infoLogLength, NULL, &msg[0]);
+        Log::WriteOnStream(&msg[0], Log::error_stream);
+    }
 	init = true;
 
 	Log::WriteOnStream("------------------------------------\n", Log::log_stream);

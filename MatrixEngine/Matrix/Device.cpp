@@ -65,13 +65,6 @@ bool MatrixEngine::Core::Device::Construct(Uint32 flags, int glMajorVersion, int
 	if (TTF_Init() < 0) {
 		MatrixEngine::Core::IO::Log::WriteOnStream("Device::Construct(): Failed to init SDL_tff\n", Log::error_stream);
 	}
-
-	window = SDL_CreateWindow("Matrix Engine", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, resolution.x, resolution.y, SDL_WINDOW_OPENGL);
-	if (!SetResolution(resolution, fullscreen)) {
-		Log::WriteOnStream("Device::Construct(): Cannot set resolution!\n", Log::error_stream);
-	}
-
-	this->SetResolution(resolution, fullscreen);
    
     if(glMajorVersion == 0 && glMajorVersion == 0) {
         glMajorVersion = this->GetHighestAvailableGLMajorVersion();
@@ -79,6 +72,14 @@ bool MatrixEngine::Core::Device::Construct(Uint32 flags, int glMajorVersion, int
     }
 	this->SetGLVersion(glMajorVersion, glMinorVersion);
 
+    
+    window = SDL_CreateWindow("Matrix Engine", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, resolution.x, resolution.y, SDL_WINDOW_OPENGL);
+    if (!SetResolution(resolution, fullscreen)) {
+        Log::WriteOnStream("Device::Construct(): Cannot set resolution!\n", Log::error_stream);
+    }
+    this->SetResolution(resolution, fullscreen);
+    
+    
 	SDL_GL_SetAttribute(SDL_GL_ACCELERATED_VISUAL, 1);
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
 	SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
@@ -92,6 +93,12 @@ bool MatrixEngine::Core::Device::Construct(Uint32 flags, int glMajorVersion, int
 
 	this->InitializeGL();
 
+    
+    std::stringstream msg;
+    msg << "OpenGL version: " << glGetString(GL_VERSION) << ". ";
+    msg << "GLSL Version " << glGetString(GL_SHADING_LANGUAGE_VERSION) << std::endl;
+    Log::WriteOnStream(msg.str(), Log::log_stream);
+    
 	return true;
 }
 
@@ -133,10 +140,6 @@ bool MatrixEngine::Core::Device::SetGLVersion(int majorVersion, int minorVersion
 		Log::WriteOnStream("Device::SetGLVersion(): Cannot set GL minor version to " + minorVersion, Log::error_stream);
 		return false;
 	}
-
-	std::stringstream msg;
-	msg << "OpenGL version: " << majorVersion << "." << minorVersion << std::endl;
-	Log::WriteOnStream(msg.str(), Log::log_stream);
 
 	return true;
 }

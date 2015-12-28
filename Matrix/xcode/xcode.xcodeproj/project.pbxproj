@@ -79,10 +79,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		84F54CEF1C21621D003F124D = {
+		8460CBCF1C31E08C0008D9EB /* MatrixEngine */ = {
 			isa = PBXGroup;
 			children = (
-				846C45151C31D4BF00028CB6 /* libassimp.3.1.1.dylib */,
 				846C45111C31D45100028CB6 /* MouseListener.cpp */,
 				846C45121C31D45100028CB6 /* Primitives.cpp */,
 				846C44FB1C31D44300028CB6 /* Camera.cpp */,
@@ -96,6 +95,23 @@
 				846C45031C31D44300028CB6 /* Texture.cpp */,
 				846C45041C31D44300028CB6 /* TextureCube.cpp */,
 				846C45051C31D44300028CB6 /* VAO.cpp */,
+			);
+			name = MatrixEngine;
+			sourceTree = "<group>";
+		};
+		8460CBD01C31E0C80008D9EB /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Unit;
+			sourceTree = "<group>";
+		};
+		84F54CEF1C21621D003F124D = {
+			isa = PBXGroup;
+			children = (
+				8460CBD01C31E0C80008D9EB /* Unit */,
+				8460CBCF1C31E08C0008D9EB /* MatrixEngine */,
+				846C45151C31D4BF00028CB6 /* libassimp.3.1.1.dylib */,
 				846C44F51C31D42600028CB6 /* SDL2_image.framework */,
 				846C44F61C31D42600028CB6 /* SDL2_ttf.framework */,
 				846C44F71C31D42600028CB6 /* SDL2.framework */,

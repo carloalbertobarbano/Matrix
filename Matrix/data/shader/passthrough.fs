@@ -1,4 +1,4 @@
-#version 330
+#version 150
 #extension GL_ARB_separate_shader_objects: enable
 
 precision highp float;
@@ -12,7 +12,7 @@ in vec2 tex_coord;
 out vec4 color;
 
 vec4 getTexel() {
-  return texture2D(diffuse_texture, tex_coord);
+   return texture(diffuse_texture, tex_coord);
 }
 
 void main() {
