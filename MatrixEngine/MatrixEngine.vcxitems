@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{45d41acc-2c3c-43d2-bc10-02aa73ffc7c7}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Camera.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Device.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\FrameBuffer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\KeyboardEventListener.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\matrix_engine_internal.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\MouseEventListener.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\RenderPipeline.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Shader.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Texture.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\TextureCube.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\VAO.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)unit\MouseListener.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)unit\Primitives.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Camera.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Device.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\FrameBuffer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\KeyboardEventListener.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Matrix.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\matrix_engine_internal.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Mesh.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\MouseEventListener.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\RenderPipeline.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Shader.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Texture.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\TextureCube.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\VAO.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)unit\AssimpLoad.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)unit\FrameBufferTest.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)unit\KeyboardListener.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)unit\MouseListener.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)unit\Primitives.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)unit\ShaderLoad.h" />
+  </ItemGroup>
+</Project>
