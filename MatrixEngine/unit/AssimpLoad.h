@@ -96,6 +96,8 @@ void processMesh(aiMesh *ai_mesh, const aiScene *scene, std::shared_ptr<Mesh> me
 
 void RunUnitAssimpLoad()
 {
+    Core::_pCurrentDevice->SetCaption("Matrix Engine - Assimp Load Test");
+
 	std::shared_ptr<Mesh> mesh = LoadMesh("data/models/Stormtrooper.obj");
 	SDL_Log("Mesh section: %d\n", mesh->section.size());
 
@@ -156,7 +158,7 @@ void RunUnitAssimpLoad()
 		double cpu_duration = (std::clock() - startcputime) / (double)CLOCKS_PER_SEC;
 
 		if (cpu_duration >= 1.0) {
-			Core::_pCurrentDevice->SetCaption("Matring Engine - FPS: " + std::to_string(frames));
+			Core::_pCurrentDevice->SetCaption("Matrix Engine - Assimp Load Test - FPS: " + std::to_string(frames));
 			frames = 0;
 			startcputime = std::clock();
 		}

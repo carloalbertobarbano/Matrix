@@ -16,6 +16,8 @@ using namespace MatrixEngine::Graphics::Components;
 
 void RunUnitFrameBufferTest()
 {
+    Core::_pCurrentDevice->SetCaption("Matrix Engine - Frame Buffer Test");
+
 	std::shared_ptr<FrameBuffer> fbo(new FrameBuffer(FrameBuffer::RENDER_BUFFER, vec2(1920, 1080)));
 	fbo->LoadShader("data/shader/fbo_shader.vs", "data/shader/fbo_shader.fs");
 
