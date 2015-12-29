@@ -35,6 +35,7 @@ public:
 	Shader::ShaderSource *shader_vert, *shader_frag;
 	Shader::ShaderProgram *shader;
 
+    glm::vec2 GetResolution() { return res; }
 protected:
 	uint fbo;
 	uint fbo_depth;

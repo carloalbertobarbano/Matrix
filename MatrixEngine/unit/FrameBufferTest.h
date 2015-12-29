@@ -16,9 +16,11 @@ using namespace MatrixEngine::Graphics::Components;
 
 void RunUnitFrameBufferTest()
 {
+    Core::_pCurrentDevice->SetCaption("Matrix Engine - Frame Buffer Test");
+
 	std::shared_ptr<FrameBuffer> fbo(new FrameBuffer(FrameBuffer::RENDER_BUFFER, vec2(1920, 1080)));
 	fbo->LoadShader("data/shader/fbo_shader.vs", "data/shader/fbo_shader.fs");
-	
+
 	std::shared_ptr<ShaderProgram> shaderPassthrough(new ShaderProgram());
 	std::shared_ptr<ShaderSource>  shaderPassthroughVertex(new ShaderSource());
 	std::shared_ptr<ShaderSource>  shaderPassthroughFragment(new ShaderSource());
@@ -30,16 +32,17 @@ void RunUnitFrameBufferTest()
 	shaderPassthrough->AttachShader(shaderPassthroughFragment.get());
 	shaderPassthrough->Compile();
 
+    glm::vec2 res = Core::_pCurrentDevice->GetResolution();
 	glm::vec3 cameraPos = vec3(0.0, 0.0, 10.0);
-	glm::mat4 projMat = glm::perspective(glm::radians(60.0f), (float)(800.0/600.0), 0.1f, 100.0f);
+	glm::mat4 projMat = glm::perspective(glm::radians(60.0f), (float)( res.x / res.y), 0.1f, 100.0f);
 	glm::mat4 viewMat = glm::lookAt(cameraPos, glm::vec3(0.0, 0.0, -1.0), glm::vec3(0.0, 1.0, 0.0));
 	glm::mat4 modMat = glm::mat4(1.0f);
 
-	
+
 	//modMat = glm::translate(modMat, vec3(0.0, 0.0, -5.0));
 
-	
-	//RenderPipeline::DisableDepth(); 
+
+	//RenderPipeline::DisableDepth();
 
 	float time = 0.0;
 
@@ -52,17 +55,17 @@ void RunUnitFrameBufferTest()
 		shaderPassthrough->sendUniformMatrix4fv(shaderPassthrough->getUniformLocation("projMat"), 1, GL_FALSE, projMat);
 		shaderPassthrough->sendUniformMatrix4fv(shaderPassthrough->getUniformLocation("viewMat"), 1, GL_FALSE, viewMat);
 		shaderPassthrough->sendUniformMatrix4fv(shaderPassthrough->getUniformLocation("modMat"), 1, GL_FALSE, modMat);
-		
+
 		fbo->shader->sendUniform1f(fbo->shader->getUniformLocation("time"), time);
         fbo->Bind();
 		RenderPipeline::ClearScreen(vec4(0.0, 0.0, 0.0, 1.0));
 		shaderPassthrough->bind();
-		DrawCube();
+        DrawTriangle();
 		shaderPassthrough->unbind();
 		fbo->Unbind();
 
 		RenderPipeline::DisableDepth();
-		fbo->Render(vec4(100, 100, 600, 400));
+		fbo->Render(vec4(res.x/2 - 500, res.y/2 - 300, 1000, 600));
 		RenderPipeline::EnableDepth();
 
 		cameraPos = vec3(5*cos(time), 1.0, 5*sin(time));
