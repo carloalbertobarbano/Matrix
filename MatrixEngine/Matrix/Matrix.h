@@ -15,7 +15,7 @@
 #include "TextureCube.h"
 #include "FrameBuffer.h"
 
-#include "MeshAsset.h"
-#include "MeshRenderer.h"
+//#include "MeshAsset.h"
+//#include "MeshRenderer.h"
 
 #endif

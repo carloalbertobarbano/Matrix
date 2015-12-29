@@ -19,11 +19,10 @@ using namespace MatrixEngine;
 using namespace MatrixEngine::Core;
 using namespace MatrixEngine::Graphics;
 using namespace MatrixEngine::Graphics::Components;
-using namespace MatrixEngine::Scene::Components;
 
 using namespace Assimp;
 
-/*typedef struct {
+typedef struct {
 	std::vector<float> vert;
 	std::vector<float> norm;
 	std::vector<float> tex_coord;
@@ -78,59 +77,28 @@ using namespace Assimp;
 		texture.Unbind();
 	}
 
-} MeshSection;
+} _MeshSection;
 
 typedef struct {
-	std::vector< std::shared_ptr<MeshSection> > section;
+	std::vector< std::shared_ptr<_MeshSection> > section;
 
 	void Render() {
 		for (int i = 0; i < section.size(); i++) {
 			section[i]->Render();
 		}
-	} 
+	}
 
-} Mesh;
+} _Mesh;
 
-std::shared_ptr<Mesh> LoadMesh(std::string file);
-void processMesh(aiMesh *ai_mesh, const aiScene *scene, std::shared_ptr<Mesh> mesh);*/
+std::shared_ptr<_Mesh> LoadMesh(std::string file);
+void processMesh(aiMesh *ai_mesh, const aiScene *scene, std::shared_ptr<_Mesh> mesh);
 
 
 void RunUnitAssimpLoad()
 {
-<<<<<<< HEAD
-	std::shared_ptr<MeshAsset> asset(new MeshAsset());
-	asset->LoadAsset("data/models/Stormtrooper.obj");
+	Core::_pCurrentDevice->SetCaption("Matrix Engine - Assimp Load Test");
 
-	std::shared_ptr<MeshRenderer> renderer(new MeshRenderer(asset));
-	renderer->LoadShader("data/shader/passthrough.vs", "data/shader/passthrough.fs");
-
-	glm::vec3 cameraPos = vec3(0.0, 2.0, 5.0);
-	RenderPipeline::glProjectionMatrix = glm::perspective(glm::radians(60.0f), (float)(800.0 / 600.0), 0.1f, 100.0f);
-	float time = 0.0;
-
-	while (running) {
-		Core::_pCurrentDevice->HandleInput();
-
-		RenderPipeline::ClearScreen(vec4(0.0, 0.0, 0.5, 1.0));
-		RenderPipeline::PrepareForRendering();
-
-		renderer->Render();
-
-		cameraPos.x = sin(time) * 5; // = vec3(5 * cos(time), 2.0, 5 * sin(time));
-		cameraPos.z = cos(time) * 15 - 10;
-		RenderPipeline::glViewMatrix = glm::lookAt(cameraPos, glm::vec3(0.0, 1.5, 0.0), glm::vec3(0.0, 1.0, 0.0));
-		time += 0.01;
-
-		RenderPipeline::SwapBuffer();
-	}
-
-}
-	/*std::shared_ptr<Mesh> mesh = LoadMesh("data/models/Stormtrooper.obj");
-=======
-    Core::_pCurrentDevice->SetCaption("Matrix Engine - Assimp Load Test");
-
-	std::shared_ptr<Mesh> mesh = LoadMesh("data/models/Stormtrooper.obj");
->>>>>>> 4a2794312bfd2bca7b2a4a63a661166063b9623f
+	std::shared_ptr<_Mesh> mesh = LoadMesh("data/models/Stormtrooper.obj");
 	SDL_Log("Mesh section: %d\n", mesh->section.size());
 
 	std::shared_ptr<ShaderProgram> shaderPassthrough(new ShaderProgram());
@@ -144,9 +112,9 @@ void RunUnitAssimpLoad()
 	shaderPassthrough->AttachShader(shaderPassthroughFragment.get());
 	shaderPassthrough->Compile();
 
-    glm::vec2 res = Core::_pCurrentDevice->GetResolution();
+	glm::vec2 res = Core::_pCurrentDevice->GetResolution();
 	glm::vec3 cameraPos = vec3(0.0, 2.0, 5.0);
-	glm::mat4 projMat = glm::perspective(glm::radians(60.0f), (float)( res.x / res.y), 0.1f, 100.0f);
+	glm::mat4 projMat = glm::perspective(glm::radians(60.0f), (float)(res.x / res.y), 0.1f, 100.0f);
 	glm::mat4 viewMat = glm::lookAt(cameraPos, glm::vec3(0.0, 0.0, -1.0), glm::vec3(0.0, 1.0, 0.0));
 	glm::mat4 modMat = glm::scale(glm::mat4(1.0f), vec3(0.021));
 	modMat = glm::translate(modMat, vec3(0.0, -2.0, 0.0));
@@ -203,9 +171,9 @@ void RunUnitAssimpLoad()
 }
 
 
-std::shared_ptr<Mesh> LoadMesh(std::string file)
+std::shared_ptr<_Mesh> LoadMesh(std::string file)
 {
-	std::shared_ptr<Mesh> mesh(new Mesh());
+	std::shared_ptr<_Mesh> mesh(new _Mesh());
 
 	SDL_Log("Loading %s\n", file.c_str());
 
@@ -227,9 +195,9 @@ std::shared_ptr<Mesh> LoadMesh(std::string file)
 	return mesh;
 }
 
-void processMesh(aiMesh *ai_mesh, const aiScene *scene, std::shared_ptr<Mesh> mesh)
+void processMesh(aiMesh *ai_mesh, const aiScene *scene, std::shared_ptr<_Mesh> mesh)
 {
-	std::shared_ptr<MeshSection> section(new MeshSection);
+	std::shared_ptr<_MeshSection> section(new _MeshSection);
 	for (int i = 0; i < ai_mesh->mNumVertices; i++) {
 		vec3 m_vert(ai_mesh->mVertices[i].x, ai_mesh->mVertices[i].y, ai_mesh->mVertices[i].z);
 		vec3 m_norm(ai_mesh->mNormals[i].x, ai_mesh->mNormals[i].y, ai_mesh->mNormals[i].z);
@@ -265,18 +233,13 @@ void processMesh(aiMesh *ai_mesh, const aiScene *scene, std::shared_ptr<Mesh> me
 	section->texture.LoadFromFile("data/models/" + std::string(path.data));
 
 	SDL_Log("Section %d has %d vertices, %d normals, %d texture coords, %d tangents, %d indices\n", mesh->section.size(), section->vert.size() / 3,
-																											  section->norm.size() / 3,
-																											  section->tex_coord.size() / 2,
-																											  section->tang.size() / 3,
-																											  section->indices.size());
+		section->norm.size() / 3,
+		section->tex_coord.size() / 2,
+		section->tang.size() / 3,
+		section->indices.size());
 	section->ConstructVAO();
 	mesh->section.push_back(section);
 }
 
 
-<<<<<<< HEAD
-*/
 #endif
-=======
-#endif
->>>>>>> 4a2794312bfd2bca7b2a4a63a661166063b9623f
