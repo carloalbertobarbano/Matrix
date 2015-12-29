@@ -70,7 +70,7 @@ typedef struct {
 
 		vao->Unbind();
 	}
-	
+
 	void Render() {
 		texture.BindUnit(0);
 		vao->DrawArrays(GL_TRIANGLES, 0, vert.size() / 3);
@@ -103,15 +103,16 @@ void RunUnitAssimpLoad()
 	std::shared_ptr<ShaderSource>  shaderPassthroughVertex(new ShaderSource());
 	std::shared_ptr<ShaderSource>  shaderPassthroughFragment(new ShaderSource());
 
-	shaderPassthroughVertex->LoadFromFile(GL_VERTEX_SHADER, "data/shader/passthrough.vs");
-	shaderPassthroughFragment->LoadFromFile(GL_FRAGMENT_SHADER, "data/shader/passthrough.fs");
+	shaderPassthroughVertex->LoadFromFile(GL_VERTEX_SHADER, "data/shader/basic.vs");
+	shaderPassthroughFragment->LoadFromFile(GL_FRAGMENT_SHADER, "data/shader/basic.fs");
 
 	shaderPassthrough->AttachShader(shaderPassthroughVertex.get());
 	shaderPassthrough->AttachShader(shaderPassthroughFragment.get());
 	shaderPassthrough->Compile();
 
+    glm::vec2 res = Core::_pCurrentDevice->GetResolution();
 	glm::vec3 cameraPos = vec3(0.0, 2.0, 5.0);
-	glm::mat4 projMat = glm::perspective(glm::radians(60.0f), (float)(800.0 / 600.0), 0.1f, 100.0f);
+	glm::mat4 projMat = glm::perspective(glm::radians(60.0f), (float)( res.x / res.y), 0.1f, 100.0f);
 	glm::mat4 viewMat = glm::lookAt(cameraPos, glm::vec3(0.0, 0.0, -1.0), glm::vec3(0.0, 1.0, 0.0));
 	glm::mat4 modMat = glm::scale(glm::mat4(1.0f), vec3(0.021));
 	modMat = glm::translate(modMat, vec3(0.0, -2.0, 0.0));
@@ -131,7 +132,7 @@ void RunUnitAssimpLoad()
 		shaderPassthrough->sendUniformMatrix4fv(shaderPassthrough->getUniformLocation("modMat"), 1, GL_FALSE, modMat);
 		shaderPassthrough->sendUniform1i(shaderPassthrough->getUniformLocation("diffuse_texture"), 0);
 		//shaderPassthrough->sendUniform1f(shaderPassthrough->getUniformLocation("time"), time);
-	
+
 		for (int x = -5; x < 5; x++) {
 			for (int z = 0; z < 10; z++) {
 				mat4 modMat2 = glm::translate(mat4(1.0), vec3(x*2.5, -2.0, -z * 2));
@@ -143,7 +144,7 @@ void RunUnitAssimpLoad()
 				shaderPassthrough->unbind();
 			}
 		}
-		
+
 		cameraPos.x = sin(time) * 5; // = vec3(5 * cos(time), 2.0, 5 * sin(time));
 		cameraPos.z = cos(time) * 15 - 10;
 		viewMat = glm::lookAt(cameraPos, glm::vec3(0.0, 1.5, 0.0), glm::vec3(0.0, 1.0, 0.0));
@@ -163,6 +164,8 @@ void RunUnitAssimpLoad()
 
 	shaderPassthrough->DetachShader(shaderPassthroughVertex.get());
 	shaderPassthrough->DetachShader(shaderPassthroughFragment.get());
+
+	//running = true;
 }
 
 

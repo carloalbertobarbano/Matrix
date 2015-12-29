@@ -35,12 +35,14 @@
 
 #ifdef __ANDROID__
 #include <SDL2_image/SDL_image.h>
-#else 
+#else
 
-#ifndef __linux__ 
+#ifndef __linux__
 #include <SDL2_image/SDL_image.h>
+#include <SDL2_ttf/SDL_ttf.h>
 #else
 #include <SDL2/SDL_image.h>
+#include <SDL2/SDL_ttf.h>
 #endif
 
 #endif
@@ -62,7 +64,6 @@
 #include <SDL2/SDL_opengl.h>
 #endif
 
-#include <SDL2_ttf/SDL_ttf.h>
 
 namespace MatrixEngine {
 	namespace Core {
@@ -106,7 +107,7 @@ namespace MatrixEngine {
 				class Light;
 			}
 		}
-		
+
 		namespace Memory {
 			class VAO;
 		}
