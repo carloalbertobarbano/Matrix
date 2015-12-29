@@ -19,10 +19,11 @@ using namespace MatrixEngine;
 using namespace MatrixEngine::Core;
 using namespace MatrixEngine::Graphics;
 using namespace MatrixEngine::Graphics::Components;
+using namespace MatrixEngine::Scene::Components;
 
 using namespace Assimp;
 
-typedef struct {
+/*typedef struct {
 	std::vector<float> vert;
 	std::vector<float> norm;
 	std::vector<float> tex_coord;
@@ -91,12 +92,39 @@ typedef struct {
 } Mesh;
 
 std::shared_ptr<Mesh> LoadMesh(std::string file);
-void processMesh(aiMesh *ai_mesh, const aiScene *scene, std::shared_ptr<Mesh> mesh);
+void processMesh(aiMesh *ai_mesh, const aiScene *scene, std::shared_ptr<Mesh> mesh);*/
 
 
 void RunUnitAssimpLoad()
 {
-	std::shared_ptr<Mesh> mesh = LoadMesh("data/models/Stormtrooper.obj");
+	std::shared_ptr<MeshAsset> asset(new MeshAsset());
+	asset->LoadAsset("data/models/Stormtrooper.obj");
+
+	std::shared_ptr<MeshRenderer> renderer(new MeshRenderer(asset));
+	renderer->LoadShader("data/shader/passthrough.vs", "data/shader/passthrough.fs");
+
+	glm::vec3 cameraPos = vec3(0.0, 2.0, 5.0);
+	RenderPipeline::glProjectionMatrix = glm::perspective(glm::radians(60.0f), (float)(800.0 / 600.0), 0.1f, 100.0f);
+	float time = 0.0;
+
+	while (running) {
+		Core::_pCurrentDevice->HandleInput();
+
+		RenderPipeline::ClearScreen(vec4(0.0, 0.0, 0.5, 1.0));
+		RenderPipeline::PrepareForRendering();
+
+		renderer->Render();
+
+		cameraPos.x = sin(time) * 5; // = vec3(5 * cos(time), 2.0, 5 * sin(time));
+		cameraPos.z = cos(time) * 15 - 10;
+		RenderPipeline::glViewMatrix = glm::lookAt(cameraPos, glm::vec3(0.0, 1.5, 0.0), glm::vec3(0.0, 1.0, 0.0));
+		time += 0.01;
+
+		RenderPipeline::SwapBuffer();
+	}
+
+}
+	/*std::shared_ptr<Mesh> mesh = LoadMesh("data/models/Stormtrooper.obj");
 	SDL_Log("Mesh section: %d\n", mesh->section.size());
 
 	std::shared_ptr<ShaderProgram> shaderPassthrough(new ShaderProgram());
@@ -237,4 +265,5 @@ void processMesh(aiMesh *ai_mesh, const aiScene *scene, std::shared_ptr<Mesh> me
 }
 
 
+*/
 #endif

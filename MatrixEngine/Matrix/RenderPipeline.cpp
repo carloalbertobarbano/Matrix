@@ -8,6 +8,7 @@ mat4 RenderPipeline::glViewMatrix;
 int  RenderPipeline::RenderMode = RENDER_ALL;
 int  RenderPipeline::FillMode = FILL_SOLID;
 int  RenderPipeline::ShadeMode = LIGHTING;
+vec4 RenderPipeline::color = vec4(1.0);
 
 bool RenderPipeline::constructed = false;
 

@@ -60,6 +60,13 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)unit\Primitives.cpp">
       <Filter>unit\src</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\MeshAsset.cpp">
+      <Filter>engine\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Material.cpp">
+      <Filter>engine\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\MeshRenderer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Camera.h">
@@ -113,11 +120,17 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)unit\ShaderLoad.h">
       <Filter>unit\headers</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Mesh.h">
-      <Filter>engine</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)unit\AssimpLoad.h">
       <Filter>unit\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\MeshAsset.h">
+      <Filter>engine\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\MeshRenderer.h">
+      <Filter>engine\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Material.h">
+      <Filter>engine\headers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

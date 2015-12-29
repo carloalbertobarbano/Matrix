@@ -18,7 +18,10 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Device.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\FrameBuffer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\KeyboardEventListener.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Material.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\matrix_engine_internal.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\MeshAsset.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\MeshRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\MouseEventListener.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\RenderPipeline.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Shader.cpp" />
@@ -33,9 +36,11 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Device.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\FrameBuffer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\KeyboardEventListener.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Material.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Matrix.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\matrix_engine_internal.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Mesh.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\MeshAsset.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\MeshRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\MouseEventListener.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\RenderPipeline.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Shader.h" />

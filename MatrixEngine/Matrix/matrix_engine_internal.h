@@ -64,6 +64,11 @@
 
 #include <SDL2_ttf/SDL_ttf.h>
 
+
+#include <assimp/Importer.hpp>
+#include <assimp/scene.h>
+#include <assimp/postprocess.h>
+
 namespace MatrixEngine {
 	namespace Core {
 		class Device;
@@ -117,10 +122,6 @@ namespace MatrixEngine {
 			class ShaderProgram;
 		}
 
-		namespace Render {
-			class MeshRenderer;
-		}
-
 		namespace UI {
 			class Container;
 			class Button;
@@ -137,8 +138,10 @@ namespace MatrixEngine {
 
 		namespace Components {
 			class Camera;
+			extern Camera *_pCurrentCamera;
 
-			class Mesh;
+			class MeshAsset;
+			class MeshRenderer;
 		}
 	}
 }
