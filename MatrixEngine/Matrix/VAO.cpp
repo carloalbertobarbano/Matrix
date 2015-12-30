@@ -14,14 +14,11 @@ VAO::VAO()
 
 VAO::~VAO()
 {
-   if(constructed)
-#ifdef __APPLE__
-   glDeleteVertexArraysAPPLE(1,&vao);
-#else
+    if(constructed) {
 #ifndef __ANDROID__
    glDeleteVertexArrays(1,&vao);
 #endif
-#endif
+    }
     
    if(buffer)
     delete []buffer;
@@ -30,13 +27,11 @@ VAO::~VAO()
 void VAO::Construct(int buff_n)
 {
 	buffer = new GLuint[buff_n];
-#ifdef __APPLE__
-    glGenVertexArraysAPPLE(1,&vao);
-#else
+
 #ifndef __ANDROID__
     glGenVertexArrays(1,&vao);
 #endif
-#endif
+
 	
 	Bind();
 
@@ -63,23 +58,15 @@ void VAO::ResetBuffer(int buff_n)
 
 void VAO::Bind()
 {
-#ifdef __APPLE__
-    glBindVertexArrayAPPLE(vao);
-#else
 #ifndef __ANDROID__
 	glBindVertexArray(vao);
-#endif
 #endif
 }
 
 void VAO::Unbind()
 {
-#ifdef __APPLE__
-    glBindVertexArrayAPPLE(0);
-#else
 #ifndef __ANDROID__
 	glBindVertexArray(0);
-#endif
 #endif
 }
 

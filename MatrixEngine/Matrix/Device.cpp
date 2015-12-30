@@ -202,14 +202,14 @@ void MatrixEngine::Core::Device::RegisterGamepadListener(std::shared_ptr<DeviceL
 
 void MatrixEngine::Core::Device::InitializeGL()
 {
-#if !defined(__APPLE__) && !defined(__ANDROID__)
+//#if !defined(__APPLE__) && !defined(__ANDROID__)
 	glewExperimental = GL_TRUE;
 	GLenum res = glewInit();
 	if (res != GLEW_OK)
 	{
 		Log::WriteOnStream("Cannot initialize glew: " + std::string((const char*)glewGetErrorString(res)), Log::error_stream);
 	}
-#endif
+//#endif
 }
 
 void MatrixEngine::Core::Device::HandleInput()

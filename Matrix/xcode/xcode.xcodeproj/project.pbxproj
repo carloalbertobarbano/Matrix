@@ -28,7 +28,25 @@
 		846C45101C31D44300028CB6 /* VAO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 846C45051C31D44300028CB6 /* VAO.cpp */; };
 		846C45131C31D45100028CB6 /* MouseListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 846C45111C31D45100028CB6 /* MouseListener.cpp */; };
 		846C45141C31D45100028CB6 /* Primitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 846C45121C31D45100028CB6 /* Primitives.cpp */; };
-		846C45161C31D4BF00028CB6 /* libassimp.3.1.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 846C45151C31D4BF00028CB6 /* libassimp.3.1.1.dylib */; };
+		846C45161C31D4BF00028CB6 /* libassimp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 846C45151C31D4BF00028CB6 /* libassimp.dylib */; };
+		84941AA71C33EE4900D32159 /* libGLEW.1.12.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84941AA61C33EE4900D32159 /* libGLEW.1.12.0.dylib */; };
+		84941AB91C33EE8C00D32159 /* Camera.h in Sources */ = {isa = PBXBuildFile; fileRef = 84941AA81C33EE8C00D32159 /* Camera.h */; };
+		84941ABA1C33EE8C00D32159 /* Device.h in Sources */ = {isa = PBXBuildFile; fileRef = 84941AA91C33EE8C00D32159 /* Device.h */; };
+		84941ABB1C33EE8C00D32159 /* FrameBuffer.h in Sources */ = {isa = PBXBuildFile; fileRef = 84941AAA1C33EE8C00D32159 /* FrameBuffer.h */; };
+		84941ABC1C33EE8C00D32159 /* KeyboardEventListener.h in Sources */ = {isa = PBXBuildFile; fileRef = 84941AAB1C33EE8C00D32159 /* KeyboardEventListener.h */; };
+		84941ABD1C33EE8C00D32159 /* Material.h in Sources */ = {isa = PBXBuildFile; fileRef = 84941AAC1C33EE8C00D32159 /* Material.h */; };
+		84941ABE1C33EE8C00D32159 /* matrix_engine_internal.h in Sources */ = {isa = PBXBuildFile; fileRef = 84941AAD1C33EE8C00D32159 /* matrix_engine_internal.h */; };
+		84941ABF1C33EE8C00D32159 /* Matrix.h in Sources */ = {isa = PBXBuildFile; fileRef = 84941AAE1C33EE8C00D32159 /* Matrix.h */; };
+		84941AC01C33EE8C00D32159 /* MeshAsset.h in Sources */ = {isa = PBXBuildFile; fileRef = 84941AAF1C33EE8C00D32159 /* MeshAsset.h */; };
+		84941AC11C33EE8C00D32159 /* MeshRenderer.h in Sources */ = {isa = PBXBuildFile; fileRef = 84941AB01C33EE8C00D32159 /* MeshRenderer.h */; };
+		84941AC21C33EE8C00D32159 /* MouseEventListener.h in Sources */ = {isa = PBXBuildFile; fileRef = 84941AB11C33EE8C00D32159 /* MouseEventListener.h */; };
+		84941AC31C33EE8C00D32159 /* RenderPipeline.h in Sources */ = {isa = PBXBuildFile; fileRef = 84941AB21C33EE8C00D32159 /* RenderPipeline.h */; };
+		84941AC41C33EE8C00D32159 /* SceneEntity.h in Sources */ = {isa = PBXBuildFile; fileRef = 84941AB31C33EE8C00D32159 /* SceneEntity.h */; };
+		84941AC51C33EE8C00D32159 /* SceneGraph.h in Sources */ = {isa = PBXBuildFile; fileRef = 84941AB41C33EE8C00D32159 /* SceneGraph.h */; };
+		84941AC61C33EE8C00D32159 /* Shader.h in Sources */ = {isa = PBXBuildFile; fileRef = 84941AB51C33EE8C00D32159 /* Shader.h */; };
+		84941AC71C33EE8C00D32159 /* Texture.h in Sources */ = {isa = PBXBuildFile; fileRef = 84941AB61C33EE8C00D32159 /* Texture.h */; };
+		84941AC81C33EE8C00D32159 /* TextureCube.h in Sources */ = {isa = PBXBuildFile; fileRef = 84941AB71C33EE8C00D32159 /* TextureCube.h */; };
+		84941AC91C33EE8C00D32159 /* VAO.h in Sources */ = {isa = PBXBuildFile; fileRef = 84941AB81C33EE8C00D32159 /* VAO.h */; };
 		84F54D031C216272003F124D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84F54D021C216272003F124D /* main.cpp */; };
 		84F54D191C216686003F124D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F54D181C216686003F124D /* OpenGL.framework */; };
 /* End PBXBuildFile section */
@@ -67,7 +85,25 @@
 		846C45051C31D44300028CB6 /* VAO.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = VAO.cpp; path = ../../MatrixEngine/Matrix/VAO.cpp; sourceTree = "<group>"; };
 		846C45111C31D45100028CB6 /* MouseListener.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MouseListener.cpp; path = ../../MatrixEngine/unit/MouseListener.cpp; sourceTree = "<group>"; };
 		846C45121C31D45100028CB6 /* Primitives.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Primitives.cpp; path = ../../MatrixEngine/unit/Primitives.cpp; sourceTree = "<group>"; };
-		846C45151C31D4BF00028CB6 /* libassimp.3.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libassimp.3.1.1.dylib; sourceTree = "<group>"; };
+		846C45151C31D4BF00028CB6 /* libassimp.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libassimp.dylib; sourceTree = "<group>"; };
+		84941AA61C33EE4900D32159 /* libGLEW.1.12.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libGLEW.1.12.0.dylib; sourceTree = "<group>"; };
+		84941AA81C33EE8C00D32159 /* Camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = ../../MatrixEngine/Matrix/Camera.h; sourceTree = "<group>"; };
+		84941AA91C33EE8C00D32159 /* Device.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Device.h; path = ../../MatrixEngine/Matrix/Device.h; sourceTree = "<group>"; };
+		84941AAA1C33EE8C00D32159 /* FrameBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FrameBuffer.h; path = ../../MatrixEngine/Matrix/FrameBuffer.h; sourceTree = "<group>"; };
+		84941AAB1C33EE8C00D32159 /* KeyboardEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KeyboardEventListener.h; path = ../../MatrixEngine/Matrix/KeyboardEventListener.h; sourceTree = "<group>"; };
+		84941AAC1C33EE8C00D32159 /* Material.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Material.h; path = ../../MatrixEngine/Matrix/Material.h; sourceTree = "<group>"; };
+		84941AAD1C33EE8C00D32159 /* matrix_engine_internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = matrix_engine_internal.h; path = ../../MatrixEngine/Matrix/matrix_engine_internal.h; sourceTree = "<group>"; };
+		84941AAE1C33EE8C00D32159 /* Matrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Matrix.h; path = ../../MatrixEngine/Matrix/Matrix.h; sourceTree = "<group>"; };
+		84941AAF1C33EE8C00D32159 /* MeshAsset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MeshAsset.h; path = ../../MatrixEngine/Matrix/MeshAsset.h; sourceTree = "<group>"; };
+		84941AB01C33EE8C00D32159 /* MeshRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MeshRenderer.h; path = ../../MatrixEngine/Matrix/MeshRenderer.h; sourceTree = "<group>"; };
+		84941AB11C33EE8C00D32159 /* MouseEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MouseEventListener.h; path = ../../MatrixEngine/Matrix/MouseEventListener.h; sourceTree = "<group>"; };
+		84941AB21C33EE8C00D32159 /* RenderPipeline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RenderPipeline.h; path = ../../MatrixEngine/Matrix/RenderPipeline.h; sourceTree = "<group>"; };
+		84941AB31C33EE8C00D32159 /* SceneEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SceneEntity.h; path = ../../MatrixEngine/Matrix/SceneEntity.h; sourceTree = "<group>"; };
+		84941AB41C33EE8C00D32159 /* SceneGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SceneGraph.h; path = ../../MatrixEngine/Matrix/SceneGraph.h; sourceTree = "<group>"; };
+		84941AB51C33EE8C00D32159 /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Shader.h; path = ../../MatrixEngine/Matrix/Shader.h; sourceTree = "<group>"; };
+		84941AB61C33EE8C00D32159 /* Texture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Texture.h; path = ../../MatrixEngine/Matrix/Texture.h; sourceTree = "<group>"; };
+		84941AB71C33EE8C00D32159 /* TextureCube.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TextureCube.h; path = ../../MatrixEngine/Matrix/TextureCube.h; sourceTree = "<group>"; };
+		84941AB81C33EE8C00D32159 /* VAO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VAO.h; path = ../../MatrixEngine/Matrix/VAO.h; sourceTree = "<group>"; };
 		84F54CF81C21621D003F124D /* xcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcode; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F54D021C216272003F124D /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../main.cpp; sourceTree = "<group>"; };
 		84F54D181C216686003F124D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -80,7 +116,8 @@
 			files = (
 				846C44F81C31D42600028CB6 /* SDL2_image.framework in Frameworks */,
 				846C44F91C31D42600028CB6 /* SDL2_ttf.framework in Frameworks */,
-				846C45161C31D4BF00028CB6 /* libassimp.3.1.1.dylib in Frameworks */,
+				84941AA71C33EE4900D32159 /* libGLEW.1.12.0.dylib in Frameworks */,
+				846C45161C31D4BF00028CB6 /* libassimp.dylib in Frameworks */,
 				846C44FA1C31D42600028CB6 /* SDL2.framework in Frameworks */,
 				84F54D191C216686003F124D /* OpenGL.framework in Frameworks */,
 			);
@@ -92,6 +129,28 @@
 		8460CBCF1C31E08C0008D9EB /* MatrixEngine */ = {
 			isa = PBXGroup;
 			children = (
+				84941AA81C33EE8C00D32159 /* Camera.h */,
+				84941AA91C33EE8C00D32159 /* Device.h */,
+				84941AAA1C33EE8C00D32159 /* FrameBuffer.h */,
+				84941AAB1C33EE8C00D32159 /* KeyboardEventListener.h */,
+				84941AAC1C33EE8C00D32159 /* Material.h */,
+				84941AAD1C33EE8C00D32159 /* matrix_engine_internal.h */,
+				84941AAE1C33EE8C00D32159 /* Matrix.h */,
+				84941AAF1C33EE8C00D32159 /* MeshAsset.h */,
+				84941AB01C33EE8C00D32159 /* MeshRenderer.h */,
+				84941AB11C33EE8C00D32159 /* MouseEventListener.h */,
+				84941AB21C33EE8C00D32159 /* RenderPipeline.h */,
+				84941AB31C33EE8C00D32159 /* SceneEntity.h */,
+				84941AB41C33EE8C00D32159 /* SceneGraph.h */,
+				84941AB51C33EE8C00D32159 /* Shader.h */,
+				84941AB61C33EE8C00D32159 /* Texture.h */,
+				84941AB71C33EE8C00D32159 /* TextureCube.h */,
+				84941AB81C33EE8C00D32159 /* VAO.h */,
+				8460CBE41C33E9250008D9EB /* Material.cpp */,
+				8460CBE51C33E9250008D9EB /* MeshAsset.cpp */,
+				8460CBE61C33E9250008D9EB /* MeshRenderer.cpp */,
+				8460CBE71C33E9250008D9EB /* SceneEntity.cpp */,
+				8460CBE81C33E9250008D9EB /* SceneGraph.cpp */,
 				846C45111C31D45100028CB6 /* MouseListener.cpp */,
 				846C45121C31D45100028CB6 /* Primitives.cpp */,
 				846C44FB1C31D44300028CB6 /* Camera.cpp */,
@@ -119,14 +178,10 @@
 		84F54CEF1C21621D003F124D = {
 			isa = PBXGroup;
 			children = (
-				8460CBE41C33E9250008D9EB /* Material.cpp */,
-				8460CBE51C33E9250008D9EB /* MeshAsset.cpp */,
-				8460CBE61C33E9250008D9EB /* MeshRenderer.cpp */,
-				8460CBE71C33E9250008D9EB /* SceneEntity.cpp */,
-				8460CBE81C33E9250008D9EB /* SceneGraph.cpp */,
 				8460CBD01C31E0C80008D9EB /* Unit */,
 				8460CBCF1C31E08C0008D9EB /* MatrixEngine */,
-				846C45151C31D4BF00028CB6 /* libassimp.3.1.1.dylib */,
+				846C45151C31D4BF00028CB6 /* libassimp.dylib */,
+				84941AA61C33EE4900D32159 /* libGLEW.1.12.0.dylib */,
 				846C44F51C31D42600028CB6 /* SDL2_image.framework */,
 				846C44F61C31D42600028CB6 /* SDL2_ttf.framework */,
 				846C44F71C31D42600028CB6 /* SDL2.framework */,
@@ -208,6 +263,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84941AB91C33EE8C00D32159 /* Camera.h in Sources */,
+				84941ABA1C33EE8C00D32159 /* Device.h in Sources */,
+				84941ABB1C33EE8C00D32159 /* FrameBuffer.h in Sources */,
+				84941ABC1C33EE8C00D32159 /* KeyboardEventListener.h in Sources */,
+				84941ABD1C33EE8C00D32159 /* Material.h in Sources */,
+				84941ABE1C33EE8C00D32159 /* matrix_engine_internal.h in Sources */,
+				84941ABF1C33EE8C00D32159 /* Matrix.h in Sources */,
+				84941AC01C33EE8C00D32159 /* MeshAsset.h in Sources */,
+				84941AC11C33EE8C00D32159 /* MeshRenderer.h in Sources */,
+				84941AC21C33EE8C00D32159 /* MouseEventListener.h in Sources */,
+				84941AC31C33EE8C00D32159 /* RenderPipeline.h in Sources */,
+				84941AC41C33EE8C00D32159 /* SceneEntity.h in Sources */,
+				84941AC51C33EE8C00D32159 /* SceneGraph.h in Sources */,
+				84941AC61C33EE8C00D32159 /* Shader.h in Sources */,
+				84941AC71C33EE8C00D32159 /* Texture.h in Sources */,
+				84941AC81C33EE8C00D32159 /* TextureCube.h in Sources */,
+				84941AC91C33EE8C00D32159 /* VAO.h in Sources */,
 				8460CBE91C33E9250008D9EB /* Material.cpp in Sources */,
 				8460CBEA1C33E9250008D9EB /* MeshAsset.cpp in Sources */,
 				8460CBEB1C33E9250008D9EB /* MeshRenderer.cpp in Sources */,

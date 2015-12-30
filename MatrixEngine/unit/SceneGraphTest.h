@@ -46,7 +46,7 @@ void RunUnitSceneGraph()
 		meshRendererSidious->AddChild(meshRendererRock[i].get());
 	}
 
-	SDL_Log("meshRendererStormtrooper children count: %d", meshRendererSidious->GetChildrenCount());
+	SDL_Log("meshRendererSidious children count: %d", meshRendererSidious->GetChildrenCount());
 
 	std::shared_ptr<Scene::SceneGraph> sceneGraph(new Scene::SceneGraph());
 	sceneGraph->AddEntityNode(meshRendererSidious.get());

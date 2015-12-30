@@ -31,12 +31,7 @@ int main(int argc, char **argv) {
 
     RunUnitFrameBufferTest();
 	RunUnitAssimpLoad();
-<<<<<<< HEAD
     RunUnitSceneGraph();
-    
-=======
-	RunUnitSceneGraph();
 
->>>>>>> 52d9c491ae1f93bdd4dbf00c09093bc052f7529c
 	return 0;
 }

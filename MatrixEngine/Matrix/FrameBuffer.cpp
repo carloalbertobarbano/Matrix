@@ -101,16 +101,10 @@ void FrameBuffer::Init(FrameBuffer::FrameBufferMode mode, vec2 resolution)
 	glBindRenderbuffer(GL_RENDERBUFFER, fbo_depth);
 	glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT, res.x, res.y);
 	glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, fbo_depth);
+    
 
-#ifdef __APPLE__
-    glFramebufferTextureEXT(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, fbo_texture, 0);
-#else
-#ifdef __ANDROID__
-	//glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, fbo_texture, 0);
-#else
 	glFramebufferTexture(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, fbo_texture, 0);
-#endif
-#endif
+
 	//GLenum drawBuffers[1] = {GL_COLOR_ATTACHMENT0};
 
 	//glDrawBA

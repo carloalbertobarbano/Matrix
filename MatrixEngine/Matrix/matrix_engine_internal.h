@@ -57,6 +57,10 @@
 #include <glew/glew.h>
 #endif
 
+#ifdef __APPLE__
+#include <glew/glew.h>
+#endif
+
 #define NO_SDL_GLEXT
 #ifdef MOBILE
 #include <SDL2/SDL_opengles2.h>
