@@ -24,6 +24,8 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\MeshRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\MouseEventListener.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\RenderPipeline.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\SceneEntity.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\SceneGraph.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Shader.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Texture.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\TextureCube.cpp" />
@@ -43,6 +45,8 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\MeshRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\MouseEventListener.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\RenderPipeline.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\SceneEntity.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\SceneGraph.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Shader.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Texture.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\TextureCube.h" />
@@ -52,6 +56,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)unit\KeyboardListener.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)unit\MouseListener.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)unit\Primitives.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)unit\SceneGraphTest.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)unit\ShaderLoad.h" />
   </ItemGroup>
 </Project>
