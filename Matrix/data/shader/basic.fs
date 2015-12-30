@@ -1,4 +1,4 @@
-#version 150
+#version 330
 #extension GL_ARB_separate_shader_objects: enable
 
 precision highp float;

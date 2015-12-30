@@ -1,9 +1,9 @@
-#version 150
+#version 330
 #extension GL_ARB_separate_shader_objects: enable
 
-in vec3 vert;
-in vec3 norm;
-in vec2 tex;
+layout(location = 0)in vec3 vert;
+layout(location = 1)in vec3 norm;
+layout(location = 2)in vec2 tex;
 
 uniform mat4 projMat;
 uniform mat4 viewMat;
