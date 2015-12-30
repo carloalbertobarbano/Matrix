@@ -132,14 +132,13 @@ namespace MatrixEngine {
 
 	namespace Scene {
 		class SceneGraph;
-		class SceneEntity;
+		class SceneEntity;		
 		class SceneInstance;
 
 		extern SceneGraph *_pCurrentSceneGraph;
 
 		namespace Components {
 			class Camera;
-			extern Camera *_pCurrentCamera;
 
 			class MeshAsset;
 			class MeshRenderer;

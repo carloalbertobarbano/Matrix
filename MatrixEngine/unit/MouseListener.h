@@ -7,6 +7,8 @@ using namespace MatrixEngine::Core::IO;
 
 class MouseListener : public DeviceListener::MouseEventListener {
 	public :
+		MouseListener();
+
 		virtual void OnMouseMove(glm::vec2 pos);
 		virtual void OnKeyPressed(int button, int x, int y);
 		virtual void OnKeyUp(int button, int x, int y);
@@ -18,6 +20,9 @@ class MouseListener : public DeviceListener::MouseEventListener {
 		bool RightButtonPressed() { return rightButtonPressed; }
 		bool MiddleButtonPressed() { return middleButtonPressed; }
 
+
+		float sensibility;
+		static bool updateCamera;
 	protected :
 		glm::vec2 pos;
 		glm::vec2 prevPos;
@@ -27,4 +32,6 @@ class MouseListener : public DeviceListener::MouseEventListener {
 		bool middleButtonPressed;
 
 };
+
+
 #endif

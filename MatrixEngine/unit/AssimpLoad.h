@@ -167,7 +167,38 @@ void RunUnitAssimpLoad()
 	shaderPassthrough->DetachShader(shaderPassthroughVertex.get());
 	shaderPassthrough->DetachShader(shaderPassthroughFragment.get());
 
-	//running = true;
+	running = true;
+
+	std::shared_ptr<Scene::Components::MeshAsset> meshAsset(new Scene::Components::MeshAsset());
+	std::shared_ptr<Scene::Components::MeshRenderer> meshRenderer(new Scene::Components::MeshRenderer());
+
+	meshAsset->LoadAsset("data/models/Stormtrooper.obj");
+	meshRenderer->SetMeshAsset(meshAsset);
+	meshRenderer->LoadShader("data/shader/basic.vs", "data/shader/basic.fs");
+
+	cameraPos = vec3(0.0, 2.0, 5.0);
+	RenderPipeline::glProjectionMatrix = glm::perspective(glm::radians(60.0f), (float)(res.x / res.y), 0.1f, 100.0f);
+	RenderPipeline::glViewMatrix = glm::lookAt(cameraPos, glm::vec3(0.0, 0.0, -1.0), glm::vec3(0.0, 1.0, 0.0));
+	meshRenderer->Translate(vec3(0.0, -2.0, 0.0));
+
+	while (running) {
+		Core::_pCurrentDevice->HandleInput();
+
+		RenderPipeline::ClearScreen(vec4(0.0, 0.0, 0.5, 1.0));
+		//RenderPipeline::PrepareForRendering();
+		
+		meshRenderer->Render();
+
+		RenderPipeline::SwapBuffer();
+
+		cameraPos.x = sin(time) * 5;
+		cameraPos.z = cos(time) * 15 - 10;
+		RenderPipeline::glViewMatrix = glm::lookAt(cameraPos, glm::vec3(0.0, 1.5, 0.0), glm::vec3(0.0, 1.0, 0.0));
+		time += 0.01;
+
+	}
+
+	running = true;
 }
 
 

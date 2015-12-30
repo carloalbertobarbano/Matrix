@@ -12,7 +12,7 @@ std::ofstream IO::Log::error_stream;
 std::ofstream IO::Log::log_stream;
 
 Core::Device *Core::_pCurrentDevice = NULL;
-Scene::Components::Camera *Scene::Components::_pCurrentCamera = NULL;
+Scene::SceneGraph *Scene::_pCurrentSceneGraph = NULL;
 
 void MatrixEngine::Core::IO::Log::WriteOnStream(std::string msg, std::ofstream & os) {
 	SDL_Log(msg.c_str());

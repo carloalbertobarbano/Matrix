@@ -7,8 +7,8 @@ using namespace MatrixEngine::Core::IO;
 
 class DeviceListener::KeyboardEventListener {
 	public :
-		virtual void OnKeyPressed(SDL_Keycode key);
-		virtual void OnKeyUp(SDL_Keycode key);
+		virtual void OnKeyPressed(SDL_Scancode key);
+		virtual void OnKeyUp(SDL_Scancode key);
 };
 
 

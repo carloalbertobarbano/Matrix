@@ -1,11 +1,31 @@
 #include "MouseListener.h"
 
+bool MouseListener::updateCamera = false;
+
+MouseListener::MouseListener()
+{
+	sensibility = 0.01;
+}
+
 void MouseListener::OnMouseMove(glm::vec2 currPos)
 {
 	this->prevPos = this->pos;
 	this->pos = currPos;
 
-	//std::cout << "Mouse moved to " << currPos.x << ", " << currPos.y << std::endl;
+
+	if (RenderPipeline::_pCurrentCamera && this->updateCamera)
+	{
+		SDL_Log("MouseListener::OnMouseMove() updating camera\n");
+
+		glm::vec2 middle = _pCurrentDevice->GetResolution() / vec2(2.0);
+		float yaw   = RenderPipeline::_pCurrentCamera->GetYaw() + sensibility * (currPos.x - middle.x);
+		float pitch = RenderPipeline::_pCurrentCamera->GetPitch() + sensibility * (currPos.y - middle.y);
+
+		RenderPipeline::_pCurrentCamera->SetYaw(yaw);
+		RenderPipeline::_pCurrentCamera->SetPitch(pitch);
+
+		SDL_WarpMouseInWindow(Core::_pCurrentDevice->GetWindow(), middle.x, middle.y);
+	}
 }
 
 void MouseListener::OnKeyPressed(int button, int x, int y)

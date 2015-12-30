@@ -43,7 +43,7 @@ float Camera::GetYaw()
 void Camera::MoveStrafe(float dist, float dir)
 {
 	float rad = (yaw + dir) * PI / 180.0;
-
+	
 	position.x -= sin(rad)*dist;
 	position.z += cos(rad)*dist;
 }
@@ -58,6 +58,7 @@ void Camera::MoveUp(float dist, float dir)
 void Camera::ApplyTransform()
 {
 	Lock();
+	//RenderPipeline::glViewMatrix = glm::mat4(1.0);
 	RenderPipeline::glViewMatrix = glm::rotate(RenderPipeline::glViewMatrix, pitch, vec3(1.0, 0.0, 0.0));
 	RenderPipeline::glViewMatrix = glm::rotate(RenderPipeline::glViewMatrix, yaw, vec3(0.0, 1.0, 0.0));
 	RenderPipeline::glViewMatrix = glm::translate(RenderPipeline::glViewMatrix, position);

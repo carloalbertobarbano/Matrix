@@ -231,11 +231,11 @@ void MatrixEngine::Core::Device::HandleInput()
 				break;
 
 			case SDL_KEYDOWN:
-				this->keyboardListener->OnKeyPressed(event.key.keysym.sym);
+				this->keyboardListener->OnKeyPressed(event.key.keysym.scancode);
 				break;
 
 			case SDL_KEYUP:
-				this->keyboardListener->OnKeyUp(event.key.keysym.sym);
+				this->keyboardListener->OnKeyUp(event.key.keysym.scancode);
 				break;
 
 			case SDL_MOUSEMOTION:

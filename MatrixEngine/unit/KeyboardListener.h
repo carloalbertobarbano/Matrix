@@ -13,12 +13,14 @@ public:
 		std::cout << "Destroying keyboard listener.." << std::endl;
 	}
 
-	void OnKeyPressed(SDL_Keycode key) {
+	void OnKeyPressed(SDL_Scancode key) {
+		keyPressed[key] = true;
+
 		switch (key) {
-		case SDLK_ESCAPE:
+		case SDL_SCANCODE_ESCAPE:
 			running = false;
 			break;
-		case SDLK_v:
+		case SDL_SCANCODE_V:
 			if (!Core::_pCurrentDevice->VSyncEnabled()) {
 				std::cout << "Enabling V-Sync.." << std::endl;
 				Core::_pCurrentDevice->EnableVSync();
@@ -33,6 +35,14 @@ public:
 		}
 	}
 
+	void OnKeyUp(SDL_Scancode key) {
+		keyPressed[key] = false;
+	}
+
+
+	static bool keyPressed[SDL_NUM_SCANCODES];
 };
+
+bool KeyboardListener::keyPressed[SDL_NUM_SCANCODES];
 
 #endif

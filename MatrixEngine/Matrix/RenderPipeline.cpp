@@ -42,12 +42,12 @@ void MatrixEngine::Graphics::RenderPipeline::SetProjectionMatrix(int view_angle,
 	if (ratio == -1)
 		ratio = Core::_pCurrentDevice->GetResolution().x / Core::_pCurrentDevice->GetResolution().y;
 
-	glProjectionMatrix = glm::perspective((float)view_angle, ratio, near_plane, far_plane);
+	glProjectionMatrix = glm::perspective(glm::radians((float)view_angle), ratio, near_plane, far_plane);
 }
 
 void MatrixEngine::Graphics::RenderPipeline::ResetViewMatrix()
 {
-	glViewMatrix = glm::mat4(1.0);
+	glViewMatrix = glm::mat4();
 }
 
 void MatrixEngine::Graphics::RenderPipeline::PrepareForRendering()

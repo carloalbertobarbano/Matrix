@@ -77,5 +77,7 @@ void RunUnitFrameBufferTest()
 
 	shaderPassthrough->DetachShader(shaderPassthroughVertex.get());
 	shaderPassthrough->DetachShader(shaderPassthroughFragment.get());
+
+	running = true;
 }
 #endif
