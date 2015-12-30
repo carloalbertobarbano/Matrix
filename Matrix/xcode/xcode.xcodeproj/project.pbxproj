@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8460CBE91C33E9250008D9EB /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8460CBE41C33E9250008D9EB /* Material.cpp */; };
+		8460CBEA1C33E9250008D9EB /* MeshAsset.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8460CBE51C33E9250008D9EB /* MeshAsset.cpp */; };
+		8460CBEB1C33E9250008D9EB /* MeshRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8460CBE61C33E9250008D9EB /* MeshRenderer.cpp */; };
+		8460CBEC1C33E9250008D9EB /* SceneEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8460CBE71C33E9250008D9EB /* SceneEntity.cpp */; };
+		8460CBED1C33E9250008D9EB /* SceneGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8460CBE81C33E9250008D9EB /* SceneGraph.cpp */; };
 		846C44F81C31D42600028CB6 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846C44F51C31D42600028CB6 /* SDL2_image.framework */; };
 		846C44F91C31D42600028CB6 /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846C44F61C31D42600028CB6 /* SDL2_ttf.framework */; };
 		846C44FA1C31D42600028CB6 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846C44F71C31D42600028CB6 /* SDL2.framework */; };
@@ -41,6 +46,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8460CBE41C33E9250008D9EB /* Material.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Material.cpp; path = ../../MatrixEngine/Matrix/Material.cpp; sourceTree = "<group>"; };
+		8460CBE51C33E9250008D9EB /* MeshAsset.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MeshAsset.cpp; path = ../../MatrixEngine/Matrix/MeshAsset.cpp; sourceTree = "<group>"; };
+		8460CBE61C33E9250008D9EB /* MeshRenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MeshRenderer.cpp; path = ../../MatrixEngine/Matrix/MeshRenderer.cpp; sourceTree = "<group>"; };
+		8460CBE71C33E9250008D9EB /* SceneEntity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SceneEntity.cpp; path = ../../MatrixEngine/Matrix/SceneEntity.cpp; sourceTree = "<group>"; };
+		8460CBE81C33E9250008D9EB /* SceneGraph.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SceneGraph.cpp; path = ../../MatrixEngine/Matrix/SceneGraph.cpp; sourceTree = "<group>"; };
 		846C44F51C31D42600028CB6 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
 		846C44F61C31D42600028CB6 /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
 		846C44F71C31D42600028CB6 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
@@ -109,6 +119,11 @@
 		84F54CEF1C21621D003F124D = {
 			isa = PBXGroup;
 			children = (
+				8460CBE41C33E9250008D9EB /* Material.cpp */,
+				8460CBE51C33E9250008D9EB /* MeshAsset.cpp */,
+				8460CBE61C33E9250008D9EB /* MeshRenderer.cpp */,
+				8460CBE71C33E9250008D9EB /* SceneEntity.cpp */,
+				8460CBE81C33E9250008D9EB /* SceneGraph.cpp */,
 				8460CBD01C31E0C80008D9EB /* Unit */,
 				8460CBCF1C31E08C0008D9EB /* MatrixEngine */,
 				846C45151C31D4BF00028CB6 /* libassimp.3.1.1.dylib */,
@@ -193,6 +208,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8460CBE91C33E9250008D9EB /* Material.cpp in Sources */,
+				8460CBEA1C33E9250008D9EB /* MeshAsset.cpp in Sources */,
+				8460CBEB1C33E9250008D9EB /* MeshRenderer.cpp in Sources */,
+				8460CBEC1C33E9250008D9EB /* SceneEntity.cpp in Sources */,
+				8460CBED1C33E9250008D9EB /* SceneGraph.cpp in Sources */,
 				846C45131C31D45100028CB6 /* MouseListener.cpp in Sources */,
 				846C45141C31D45100028CB6 /* Primitives.cpp in Sources */,
 				846C45061C31D44300028CB6 /* Camera.cpp in Sources */,

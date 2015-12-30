@@ -6,6 +6,7 @@
 #include "../MatrixEngine/unit/ShaderLoad.h"
 #include "../MatrixEngine/unit/FrameBufferTest.h"
 #include "../MatrixEngine/unit/AssimpLoad.h"
+#include "../MatrixEngine/unit/SceneGraphTest.h"
 
 using namespace MatrixEngine;
 using namespace MatrixEngine::Core;
@@ -29,10 +30,8 @@ int main(int argc, char **argv) {
 	RenderPipeline::Construct();
 
     RunUnitFrameBufferTest();
-
-    running = true;
-
 	RunUnitAssimpLoad();
-
+    RunUnitSceneGraph();
+    
 	return 0;
 }

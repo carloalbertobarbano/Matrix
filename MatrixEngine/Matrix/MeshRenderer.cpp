@@ -50,7 +50,11 @@ void Scene::Components::MeshRenderer::LoadShader(std::string vertex, std::string
 
 	shader_vert->LoadFromFile(GL_VERTEX_SHADER, vertex);
 	shader_frag->LoadFromFile(GL_FRAGMENT_SHADER, fragment);
-	if (shader_geom)shader_geom->LoadFromFile(GL_GEOMETRY_SHADER, geometry);
+#ifdef __APPLE__
+    if (shader_geom)shader_geom->LoadFromFile(GL_GEOMETRY_SHADER_EXT, geometry);
+#else
+    if (shader_geom)shader_geom->LoadFromFile(GL_GEOMETRY_SHADER, geometry);
+#endif
 	/* TODO: Manage tessellation shaders*/
 
 	shader->AttachShader(shader_vert.get());
