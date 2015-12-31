@@ -34,7 +34,8 @@ public:
 	void AttachShader(ShaderSource *shader);
 	void DetachShader(ShaderSource *shader);
 	void Compile();
-	
+	void Clean();
+
 	void bind();
 	void unbind();
 
@@ -88,8 +89,6 @@ public:
 
 protected:
 	uint shader_id;
-
-	bool first_init;
 };
 
 

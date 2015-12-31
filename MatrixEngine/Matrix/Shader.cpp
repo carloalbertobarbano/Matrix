@@ -49,6 +49,9 @@ ShaderSource::~ShaderSource()
 
 void ShaderSource::LoadFromFile(GLenum shader_type, std::string shader_file)
 {
+	if (init)
+		glDeleteShader(shader_handle);
+
 	Log::WriteOnStream("------------------------------------\n\n", Log::log_stream);
 	Log::WriteOnStream("Loading shader " + shader_file + " from file..", Log::log_stream);
 
@@ -121,6 +124,12 @@ void ShaderProgram::Compile()
 {
 	glLinkProgram(shader_id);
 	validateProgram(shader_id);
+}
+
+void Shader::ShaderProgram::Clean()
+{
+	glDeleteProgram(shader_id);
+	shader_id = glCreateProgram();
 }
 
 unsigned int ShaderProgram::id()

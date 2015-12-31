@@ -92,8 +92,9 @@ void Scene::Components::MeshRenderer::Render()
 	for (int i = 0; i < _pMeshAsset->sections.size(); i++) {
 		if (shader) {
 			_pMeshAsset->sections[i]->material.texture_diffuse.BindUnit(0);
+			_pMeshAsset->sections[i]->material.sendMaterialUniforms(shader.get());
 			shader->bind();
-			//_pMeshAsset->sections[i]->material.sendMaterialUniforms(shader.get());
+			
 			//_pMeshAsset->sections[i]->material.texture_bump.BindUnit(2);
 		}
 

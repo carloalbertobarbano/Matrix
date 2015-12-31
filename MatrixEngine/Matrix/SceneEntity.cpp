@@ -86,7 +86,7 @@ void Scene::SceneEntity::BuildModelMatrix()
 	if(parent)base = parent->GetModelMatrix();
 
 	modMatrix = glm::translate(base, pos);
-	modMatrix = glm::rotate(modMatrix, angle, rot);
+	modMatrix = glm::rotate(modMatrix, glm::radians(angle), rot);
 	//SDL_Log("Angle: %f Rot: %f %f %f\n", angle, rot.x, rot.y, rot.z);
 
 	modMatrix = glm::scale(modMatrix, scale);

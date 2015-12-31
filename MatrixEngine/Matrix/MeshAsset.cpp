@@ -83,7 +83,7 @@ void Scene::Components::MeshAsset::processMesh(aiMesh * ai_mesh, const aiScene *
 		vec3 m_vert(ai_mesh->mVertices[i].x, ai_mesh->mVertices[i].y, ai_mesh->mVertices[i].z);
 		vec3 m_norm(ai_mesh->mNormals[i].x, ai_mesh->mNormals[i].y, ai_mesh->mNormals[i].z);
 		vec3 m_tang = vec3(0.0); // (mesh->mTangents[i].x, mesh->mTangents[i].y, mesh->mTangents[i].z);
-		vec2 m_tex_coord = vec2(ai_mesh->mTextureCoords[0][i].x, ai_mesh->mTextureCoords[0][i].y);
+		vec2 m_tex_coord = ai_mesh->HasTextureCoords(0) ? vec2(ai_mesh->mTextureCoords[0][i].x, ai_mesh->mTextureCoords[0][i].y) : vec2(0.0, 0.0);
 
 		section->vert.push_back(m_vert.x);
 		section->vert.push_back(m_vert.y);
@@ -113,13 +113,39 @@ void Scene::Components::MeshAsset::processMesh(aiMesh * ai_mesh, const aiScene *
 	scene->mMaterials[ai_mesh->mMaterialIndex]->GetTexture(aiTextureType_DIFFUSE, 0, &texture_diffuse, NULL, NULL, NULL, NULL, NULL);
 	section->material.texture_diffuse.LoadFromFile("data/models/" + std::string(texture_diffuse.data));
 
-	SDL_Log("Section %d has %d vertices, %d normals, %d texture coords, %d tangents, %d indices\n", 
+	const aiMaterial *material = scene->mMaterials[ai_mesh->mMaterialIndex];
+	aiColor4D diffuse;
+	aiColor4D specular;
+	aiColor4D ambient;
+	aiColor4D emissive;
+
+	int shininess;
+
+	aiGetMaterialColor(material, AI_MATKEY_COLOR_DIFFUSE, &diffuse);
+	aiGetMaterialColor(material, AI_MATKEY_COLOR_AMBIENT, &ambient);
+	aiGetMaterialColor(material, AI_MATKEY_COLOR_SPECULAR, &specular);
+	aiGetMaterialColor(material, AI_MATKEY_COLOR_EMISSIVE, &emissive);
+	aiGetMaterialInteger(material, AI_MATKEY_SHININESS, &shininess);
+	
+	if (emissive.r != 0.0 || emissive.g != 0.0 || emissive.b != 0.0) {
+		ambient = emissive;
+		section->material.emissive = true;
+	}
+
+	section->material.ambient = glm::vec4(ambient.r, ambient.g, ambient.b, ambient.a);
+	section->material.diffuse = glm::vec4(diffuse.r, diffuse.g, diffuse.b, diffuse.a);
+	section->material.specular = glm::vec4(specular.r, specular.g, specular.b, specular.a);
+	section->material.shininess = shininess;
+	/* TODO: Emissive materials */
+
+	SDL_Log("Section %d has %d vertices, %d normals, %d texture coords, %d tangents, %d indices, %d bones\n", 
 			sections.size(), 
 			section->vert.size() / 3,
 			section->norm.size() / 3,
 			section->tex_coord.size() / 2,
 			section->tang.size() / 3,
-			section->indices.size());
+			section->indices.size(),
+			ai_mesh->mNumBones);
 
 	section->ConstructVAO();
 	sections.push_back(section);

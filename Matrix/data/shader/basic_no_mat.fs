@@ -4,12 +4,6 @@
 precision highp float;
 
 
-uniform vec4 mat_ambient;
-uniform vec4 mat_diffuse;
-uniform vec4 mat_specular;
-uniform int mat_shininess;
-
-uniform int use_texture;
 uniform sampler2D diffuse_texture;
 
 uniform int emissive;
@@ -33,15 +27,8 @@ void main() {
   float cosTheta = clamp( dot(n, l), 0, 1);
 
   vec4 texel = getTexel();
+  vec4 ambient = vec4(0.1, 0.1, 0.1, 1.0);
 
-  if(use_texture == 0) {
-    color = mat_diffuse*cosTheta;
-  } else {
-    color = mat_ambient*texel + mat_diffuse*cosTheta*texel;
-  }
-
-  if(emissive == 1)
-    color = mat_ambient + mat_diffuse;
-
+  color = ambient*texel + cosTheta*texel;
   color.w = 1.0;
 }

@@ -26,7 +26,6 @@ void Graphics::Components::Materials::Material::sendMaterialUniforms(ShaderProgr
 		locations.material_diffuse = shader->getUniformLocation("mat_diffuse");
 		locations.material_specular = shader->getUniformLocation("mat_specular");
 		locations.material_shininess = shader->getUniformLocation("mat_shininess");
-		locations.texture = shader->getUniformLocation("texture");
 		locations.use_texture = shader->getUniformLocation("use_texture");
 		locations.use_reflection = shader->getUniformLocation("use_reflection");
 		locations.use_refraction = shader->getUniformLocation("use_refraction");
@@ -42,12 +41,12 @@ void Graphics::Components::Materials::Material::sendMaterialUniforms(ShaderProgr
 	shader->sendUniform4f(shader->getUniformLocation("mat_specular"), specular);
 	shader->sendUniform1i(shader->getUniformLocation("mat_shininess"), shininess);
 
-	if (strcmp(texture.GetName().c_str(), "none") == 0)
+	if (texture_diffuse.GetName() == "none")
 		shader->sendUniform1i(shader->getUniformLocation("use_texture"), 0);
 	else
 		shader->sendUniform1i(shader->getUniformLocation("use_texture"), 1);
 
-	if (strcmp(texture_bump.GetName().c_str(), "none") == 0)
+	/*if (strcmp(texture_bump.GetName().c_str(), "none") == 0)
 		shader->sendUniform1i(shader->getUniformLocation("use_bump_texture"), 0);
 	else
 		shader->sendUniform1i(shader->getUniformLocation("use_bump_texture"), 1);
@@ -62,6 +61,7 @@ void Graphics::Components::Materials::Material::sendMaterialUniforms(ShaderProgr
 	else
 		shader->sendUniform1i(shader->getUniformLocation("use_refraction"), 0);
 
+		*/
 
 	if (emissive)
 		shader->sendUniform1i(shader->getUniformLocation("emissive"), 1);

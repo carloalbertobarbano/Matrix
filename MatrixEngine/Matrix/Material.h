@@ -25,7 +25,6 @@ public:
 	vec4 specular;
 	int  shininess;
 
-	Texture texture;
 	Texture texture_diffuse;
 	Texture texture_specular_color;
 	Texture texture_specular_highlight;
@@ -44,7 +43,6 @@ public:
 		int material_specular;
 		int material_shininess;
 
-		int texture;
 		int texture_diffuse;
 		int texture_specular_color;
 		int texture_specular_highlight;

@@ -106,7 +106,7 @@ void RunUnitAssimpLoad()
 	std::shared_ptr<ShaderSource>  shaderPassthroughFragment(new ShaderSource());
 
 	shaderPassthroughVertex->LoadFromFile(GL_VERTEX_SHADER, "data/shader/basic.vs");
-	shaderPassthroughFragment->LoadFromFile(GL_FRAGMENT_SHADER, "data/shader/basic.fs");
+	shaderPassthroughFragment->LoadFromFile(GL_FRAGMENT_SHADER, "data/shader/basic_no_mat.fs");
 
 	shaderPassthrough->AttachShader(shaderPassthroughVertex.get());
 	shaderPassthrough->AttachShader(shaderPassthroughFragment.get());

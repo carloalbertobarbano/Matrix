@@ -41,6 +41,7 @@ void Texture::LoadFromFile(std::string file)
 		return;
 	}
 
+	texture_file = file;
 	channels = texture->format->BytesPerPixel;
 
 	if(channels == 4)
@@ -81,7 +82,6 @@ void Texture::LoadFromFile(std::string file)
 
 	SDL_FreeSurface(texture);
 
-    texture_file = file;
 	Log::WriteOnStream("Loaded\n", Log::log_stream);
 }
 
