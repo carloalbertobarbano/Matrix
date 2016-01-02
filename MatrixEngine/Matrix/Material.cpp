@@ -36,36 +36,37 @@ void Graphics::Components::Materials::Material::sendMaterialUniforms(ShaderProgr
 	}
 
 
-	shader->sendUniform4f(shader->getUniformLocation("mat_ambient"), ambient);
-	shader->sendUniform4f(shader->getUniformLocation("mat_diffuse"), diffuse);
-	shader->sendUniform4f(shader->getUniformLocation("mat_specular"), specular);
-	shader->sendUniform1i(shader->getUniformLocation("mat_shininess"), shininess);
+	shader->sendUniform4f(locations.material_ambient, ambient);
+	shader->sendUniform4f(locations.material_diffuse, diffuse);
+	shader->sendUniform4f(locations.material_specular, specular);
+	shader->sendUniform1i(locations.material_shininess, shininess);
 
-	if (texture_diffuse.GetName() == "none")
-		shader->sendUniform1i(shader->getUniformLocation("use_texture"), 0);
-	else
-		shader->sendUniform1i(shader->getUniformLocation("use_texture"), 1);
+	if (texture_diffuse.GetName() != "none")
+		shader->sendUniform1i(locations.use_texture, 1);
+	//else
+	//	shader->sendUniform1i(shader->getUniformLocation("use_texture"), 1);
+
+	
+	if (reflection)
+		shader->sendUniform1i(locations.use_reflection, 1);
+	//else
+	//	shader->sendUniform1i(shader->getUniformLocation("use_reflection"), 0);
+
+	if (refraction)
+		shader->sendUniform1i(locations.use_refraction, 1);
+	//else
+	//	shader->sendUniform1i(shader->getUniformLocation("use_refraction"), 0);
 
 	/*if (strcmp(texture_bump.GetName().c_str(), "none") == 0)
 		shader->sendUniform1i(shader->getUniformLocation("use_bump_texture"), 0);
 	else
 		shader->sendUniform1i(shader->getUniformLocation("use_bump_texture"), 1);
 
-	if (reflection)
-		shader->sendUniform1i(shader->getUniformLocation("use_reflection"), 1);
-	else
-		shader->sendUniform1i(shader->getUniformLocation("use_reflection"), 0);
-
-	if (refraction)
-		shader->sendUniform1i(shader->getUniformLocation("use_refraction"), 1);
-	else
-		shader->sendUniform1i(shader->getUniformLocation("use_refraction"), 0);
-
 		*/
 
 	if (emissive)
-		shader->sendUniform1i(shader->getUniformLocation("emissive"), 1);
-	else
-		shader->sendUniform1i(shader->getUniformLocation("emissive"), 0);
+		shader->sendUniform1i(locations.emissive, 1);
+	//else
+	//	shader->sendUniform1i(shader->getUniformLocation("emissive"), 0);
 
 }

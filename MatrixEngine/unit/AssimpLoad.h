@@ -19,6 +19,7 @@ using namespace MatrixEngine;
 using namespace MatrixEngine::Core;
 using namespace MatrixEngine::Graphics;
 using namespace MatrixEngine::Graphics::Components;
+using namespace MatrixEngine::Scene::Components;
 
 using namespace Assimp;
 
@@ -98,6 +99,16 @@ void RunUnitAssimpLoad()
 {
 	Core::_pCurrentDevice->SetCaption("Matrix Engine - Assimp Load Test");
 
+	std::shared_ptr<CubeMap> cubemap(new CubeMap());
+	std::string maps[6];
+	maps[0] = "data/textures/alpine/alpine_left.jpg";
+	maps[1] = "data/textures/alpine/alpine_front.jpg";
+	maps[2] = "data/textures/alpine/alpine_right.jpg";
+	maps[3] = "data/textures/alpine/alpine_back.jpg";
+	maps[4] = "data/textures/alpine/alpine_top.jpg";
+	maps[5] = "data/textures/alpine/alpine_top.jpg";
+	cubemap->LoadTextureCube(maps);
+
 	std::shared_ptr<_Mesh> mesh = LoadMesh("data/models/Stormtrooper.obj");
 	SDL_Log("Mesh section: %d\n", mesh->section.size());
 
@@ -129,18 +140,20 @@ void RunUnitAssimpLoad()
 		RenderPipeline::ClearScreen(vec4(0.0, 0.0, 0.5, 1.0));
 		RenderPipeline::PrepareForRendering();
 
+		cubemap->Render();
+
 		shaderPassthrough->sendUniformMatrix4fv(shaderPassthrough->getUniformLocation("projMat"), 1, GL_FALSE, projMat);
 		shaderPassthrough->sendUniformMatrix4fv(shaderPassthrough->getUniformLocation("viewMat"), 1, GL_FALSE, viewMat);
-		shaderPassthrough->sendUniformMatrix4fv(shaderPassthrough->getUniformLocation("modMat"), 1, GL_FALSE, modMat);
+		//shaderPassthrough->sendUniformMatrix4fv(shaderPassthrough->getUniformLocation("modMat"), 1, GL_FALSE, modMat);
 		shaderPassthrough->sendUniform1i(shaderPassthrough->getUniformLocation("diffuse_texture"), 0);
 		//shaderPassthrough->sendUniform1f(shaderPassthrough->getUniformLocation("time"), time);
 
 		for (int x = -5; x < 5; x++) {
 			for (int z = 0; z < 10; z++) {
-				mat4 modMat2 = glm::translate(mat4(1.0), vec3(x*2.5, -2.0, -z * 2));
+				modMat = glm::translate(mat4(1.0), vec3(x*2.5, -2.0, -z * 2));
 				//modMat2 = glm::rotate(modMat2, time, vec3(0.0, 1.0, 0.0));
-				modMat2 = glm::scale(modMat2, vec3(1));
-				shaderPassthrough->sendUniformMatrix4fv(shaderPassthrough->getUniformLocation("modMat"), 1, GL_FALSE, modMat2);
+				modMat = glm::scale(modMat, vec3(1));
+				shaderPassthrough->sendUniformMatrix4fv(shaderPassthrough->getUniformLocation("modMat"), 1, GL_FALSE, modMat);
 				shaderPassthrough->bind();
 				mesh->Render();
 				shaderPassthrough->unbind();
@@ -187,14 +200,16 @@ void RunUnitAssimpLoad()
 		RenderPipeline::ClearScreen(vec4(0.0, 0.0, 0.5, 1.0));
 		//RenderPipeline::PrepareForRendering();
 		
+		cubemap->Render();
 		meshRenderer->Render();
 
 		RenderPipeline::SwapBuffer();
 
-		cameraPos.x = sin(time) * 5;
-		cameraPos.z = cos(time) * 15 - 10;
-		RenderPipeline::glViewMatrix = glm::lookAt(cameraPos, glm::vec3(0.0, 1.5, 0.0), glm::vec3(0.0, 1.0, 0.0));
-		time += 0.01;
+		//cameraPos.x = sin(time) * 5;
+		//cameraPos.z = cos(time) * 15 - 10;
+		//RenderPipeline::glViewMatrix = glm::lookAt(cameraPos, glm::vec3(0.0, 1.5, 0.0), glm::vec3(0.0, 1.0, 0.0));
+		meshRenderer->Rotate(time * 0.5, 0.0, 1.0, 0.0);
+		time = SDL_GetTicks() * 0.1;
 
 	}
 

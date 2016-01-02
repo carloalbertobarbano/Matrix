@@ -27,7 +27,7 @@ Texture::~Texture()
 
 void Texture::LoadFromFile(std::string file)
 {
-	Log::WriteOnStream("Loading texture "+file+"\n", Log::log_stream);
+	Log::WriteOnStream("Texture::LoadFromFile(): Loading texture "+file+"\n", Log::log_stream);
 
 	SDL_Surface *texture = NULL;
 	int channels = 0;
@@ -37,7 +37,7 @@ void Texture::LoadFromFile(std::string file)
 
 	if(!texture)
 	{
-		Log::WriteOnStream("Could not load texture: " + file + "\n", Log::error_stream);
+		Log::WriteOnStream("Texture::LoadFromFile(): Could not load texture: " + file + "\n", Log::error_stream);
 		return;
 	}
 
@@ -68,7 +68,7 @@ void Texture::LoadFromFile(std::string file)
 	}
 	else
 	{
-		Log::WriteOnStream("Texture " + file + " isn't true color. This will crash\n", Log::error_stream);
+		Log::WriteOnStream("Texture::LoadFromFile(): Texture " + file + " isn't true color. This will crash\n", Log::error_stream);
 	}
 
 	SDL_Log("Texture width: %d\n", texture->w);
@@ -82,7 +82,7 @@ void Texture::LoadFromFile(std::string file)
 
 	SDL_FreeSurface(texture);
 
-	Log::WriteOnStream("Loaded\n", Log::log_stream);
+	Log::WriteOnStream("Texture::LoadFromFile(): Loaded\n", Log::log_stream);
 }
 
 void Texture::Bind()

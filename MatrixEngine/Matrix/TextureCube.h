@@ -31,9 +31,6 @@ public:
 protected:
 	GLuint texture_id;
 	std::string texture_file[6];
-
-	Shader::ShaderProgram *shader;
-	Shader::ShaderSource *shader_vert, *shader_frag;
 };
 
 #endif

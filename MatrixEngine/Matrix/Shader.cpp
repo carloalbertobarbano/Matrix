@@ -2,6 +2,23 @@
 
 using namespace MatrixEngine::Graphics::Shader;
 
+std::vector<std::string> GetLines(char *buff) {
+	std::vector<std::string> lines;
+
+	std::string line;
+	int length = strlen(buff);
+	for (int i = 0; i < length; i++) {
+		line += buff[i];
+		if (buff[i] == '\n') {
+			lines.push_back(line);
+			line = "";
+		}
+	}
+	lines.push_back(line);
+
+	return lines;
+}
+
 static void validateShader(GLuint shader, const char* file = 0)
 {
 	const unsigned int BUFFER_SIZE = 512;
@@ -63,7 +80,46 @@ void ShaderSource::LoadFromFile(GLenum shader_type, std::string shader_file)
 	}
 
 	Log::WriteOnStream("Shader loaded..\n", Log::log_stream);
-	InitWithSource(shader_type, source);
+
+	/* GLSL Extended parsing*/
+	std::vector<std::string> lines = GetLines(source);
+
+	for (int i = 0; i < lines.size(); i++) {
+		int tok = 0;
+		while ((tok = lines[i].find("#include", tok)) != std::string::npos) {
+			tok++;
+
+			int start = lines[i].find("<", tok);
+			if (start == std::string::npos) {
+				Log::WriteOnStream("GLSLEx parser: Missing character '<' for inclusion file at line " + std::to_string(i) + " in file " + shader_file + "\n", Log::error_stream);
+				break;
+			}
+
+			int end = lines[i].find(">", tok);
+			if (end == std::string::npos) {
+				Log::WriteOnStream("GLSLEx parser: Missing character '>' for inclusion file at line " + std::to_string(i) + " in file " + shader_file + "\n", Log::error_stream);
+				break;
+			}
+
+			std::string path = lines[i].substr(start + 1, end);
+			path[end - (start + 1)] = '\0';
+
+			SDL_Log("Shader::LoadFromFile() GLSLEx parser: found inclusion file %s\n", path.c_str());
+
+			char *buf = Log::TextFileRead(path);
+			lines[i].replace(tok - 1, end - (tok - 1) + 1, buf);
+
+			free(buf);
+		}
+	}
+
+	std::string parsed = "";
+	for (int i = 0; i < lines.size(); i++)
+		parsed += lines[i];
+
+	InitWithSource(shader_type, parsed.c_str());
+
+	free(source);
 }
 
 void ShaderSource::InitWithSource(GLenum shader_type, const GLchar *source)

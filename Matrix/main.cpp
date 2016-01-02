@@ -8,6 +8,7 @@
 #include "../MatrixEngine/unit/AssimpLoad.h"
 #include "../MatrixEngine/unit/SceneGraphTest.h"
 #include "../MatrixEngine/unit/CameraTest.h"
+#include "../MatrixEngine/unit/CubeMapTest.h"
 
 using namespace MatrixEngine;
 using namespace MatrixEngine::Core;
@@ -34,6 +35,7 @@ int main(int argc, char **argv) {
 	RunUnitAssimpLoad();
     RunUnitSceneGraph();
 	RunUnitCameraTest();
+	RunUnitCubemapTest();
 
 	return 0;
 }

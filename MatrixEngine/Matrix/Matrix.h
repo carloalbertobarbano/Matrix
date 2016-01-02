@@ -21,4 +21,6 @@
 #include "MeshAsset.h"
 #include "MeshRenderer.h"
 
+#include "CubeMap.h"
+
 #endif

@@ -46,6 +46,7 @@ public:
 
 	static Scene::Components::Camera *_pCurrentCamera;
 	static Graphics::Components::Textures::TextureCube *_pCurrentTextureCube;
+	static Scene::Components::CubeMap *_pCurrentCubeMap;
 
 protected:
 	static bool constructed;

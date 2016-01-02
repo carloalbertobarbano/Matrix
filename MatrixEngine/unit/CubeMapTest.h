@@ -1,5 +1,5 @@
-#ifndef UNIT_CAMERA_TEST_H
-#define UNIT_CAMERA_TEST_H
+#ifndef UNIT_CUBEMAP_H
+#define UNIT_CUBEMAP_H
 
 #include "../Commons.h"
 #include "../Matrix/Matrix.h"
@@ -15,13 +15,24 @@ using namespace MatrixEngine;
 using namespace MatrixEngine::Core;
 using namespace MatrixEngine::Graphics;
 using namespace MatrixEngine::Graphics::Components;
+using namespace MatrixEngine::Scene::Components;
 
-void RunUnitCameraTest()
+void RunUnitCubemapTest()
 {
-	Core::_pCurrentDevice->SetCaption("Matrix Engine - First person camera test");
+	Core::_pCurrentDevice->SetCaption("Matrix Engine - Cube map test");
+
+	std::shared_ptr<CubeMap> cubemap(new CubeMap());
+	std::string maps[6];
+	maps[0] = "data/textures/mountains_left.jpg";
+	maps[1] = "data/textures/mountains_front.jpg";
+	maps[2] = "data/textures/mountains_right.jpg";
+	maps[3] = "data/textures/mountains_back.jpg";
+	maps[4] = "data/textures/mountains_top.jpg";
+	maps[5] = "data/textures/mountains_top.jpg";
+	cubemap->LoadTextureCube(maps);
 
 	std::shared_ptr<Scene::Components::MeshAsset> meshAsset(new Scene::Components::MeshAsset());
-	meshAsset->LoadAsset("data/models/star_wars_scene.obj");
+	meshAsset->LoadAsset("data/models/suzanne.obj");
 
 	std::shared_ptr<Scene::Components::MeshRenderer> meshRenderer(new Scene::Components::MeshRenderer());
 	meshRenderer->SetMeshAsset(meshAsset);
@@ -29,14 +40,11 @@ void RunUnitCameraTest()
 	meshRenderer->Translate(vec3(0.0, 0.0, 0.0));
 
 	std::shared_ptr<Scene::SceneGraph> sceneGraph(new Scene::SceneGraph());
+	sceneGraph->AddEntityNode(cubemap.get());
 	sceneGraph->AddEntityNode(meshRenderer.get());
 
-	glm::vec2 res = Core::_pCurrentDevice->GetResolution();
-	glm::vec3 cameraPos = vec3(0.0, -12.0, -25.0);
-	
 	std::shared_ptr<Scene::Components::Camera> camera(new Scene::Components::Camera());
-	camera->SetPosition(cameraPos);
-
+	vec3 cameraPos = vec3(0.0, 0.0, 0.0);
 	MouseListener::updateCamera = true;
 
 	float time = 0.0;
@@ -47,16 +55,14 @@ void RunUnitCameraTest()
 
 		RenderPipeline::ClearScreen(vec4(0.0, 0.0, 0.0, 1.0));
 		RenderPipeline::PrepareForRendering();
-		  
-		camera->ApplyTransform();
 
-		meshRenderer->shader->sendUniform1f(meshRenderer->shader->getUniformLocation("time"), time);
-	
+		camera->ApplyTransform();
+		
 		sceneGraph->RenderScene();
 
 		RenderPipeline::SwapBuffer();
 
-		
+
 		time = SDL_GetTicks() * 0.1;
 
 		if (KeyboardListener::keyPressed[SDL_SCANCODE_C]) {
@@ -90,5 +96,4 @@ void RunUnitCameraTest()
 
 	running = true;
 }
-
 #endif

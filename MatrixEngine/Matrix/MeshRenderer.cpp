@@ -1,4 +1,6 @@
 #include "MeshRenderer.h"
+#include "CubeMap.h"
+#include "TextureCube.h"
 
 Scene::Components::MeshRenderer::MeshRenderer() : SceneEntity()
 {
@@ -72,7 +74,8 @@ void Scene::Components::MeshRenderer::Render()
 		shader->sendUniformMatrix4fv(shader->getUniformLocation("viewMat"), 1, GL_FALSE, RenderPipeline::glViewMatrix);
 		shader->sendUniformMatrix4fv(shader->getUniformLocation("modMat"), 1, GL_FALSE, modMatrix);
 		shader->sendUniform1i(shader->getUniformLocation("diffuse_texture"), 0);
-		//shader->sendUniform1i(shader->getUniformLocation("cubemap"), 1);
+		if(RenderPipeline::_pCurrentCubeMap)
+			shader->sendUniform1i(shader->getUniformLocation("texture_cube"), 1);
 		//shader->sendUniform1i(shader->getUniformLocation("texture_bump"), 2);
 
 		//vec3 camera_pos = -MatrixEngine::Scene::Components::_pCurrentCamera->GetPosition();
@@ -91,6 +94,8 @@ void Scene::Components::MeshRenderer::Render()
 
 	for (int i = 0; i < _pMeshAsset->sections.size(); i++) {
 		if (shader) {
+			if (RenderPipeline::_pCurrentCubeMap)
+				RenderPipeline::_pCurrentCubeMap->GetTextureCube()->BindUnit(1);
 			_pMeshAsset->sections[i]->material.texture_diffuse.BindUnit(0);
 			_pMeshAsset->sections[i]->material.sendMaterialUniforms(shader.get());
 			shader->bind();
@@ -105,6 +110,8 @@ void Scene::Components::MeshRenderer::Render()
 			shader->unbind();
 			_pMeshAsset->sections[i]->material.texture_diffuse.Unbind();
 			_pMeshAsset->sections[i]->material.texture_bump.Unbind();
+			if (RenderPipeline::_pCurrentCubeMap)
+				RenderPipeline::_pCurrentCubeMap->GetTextureCube()->UnbindUnit(1);
 		}
 	}
 }

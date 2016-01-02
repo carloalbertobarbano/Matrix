@@ -15,11 +15,9 @@ void MouseListener::OnMouseMove(glm::vec2 currPos)
 
 	if (RenderPipeline::_pCurrentCamera && this->updateCamera)
 	{
-		SDL_Log("MouseListener::OnMouseMove() updating camera\n");
-
 		glm::vec2 middle = _pCurrentDevice->GetResolution() / vec2(2.0);
-		float yaw   = RenderPipeline::_pCurrentCamera->GetYaw() + sensibility * (currPos.x - middle.x);
-		float pitch = RenderPipeline::_pCurrentCamera->GetPitch() + sensibility * (currPos.y - middle.y);
+		float yaw   = RenderPipeline::_pCurrentCamera->GetYaw() + sensibility * (pos.x - middle.x);
+		float pitch = RenderPipeline::_pCurrentCamera->GetPitch() + sensibility * (pos.y - middle.y);
 
 		RenderPipeline::_pCurrentCamera->SetYaw(yaw);
 		RenderPipeline::_pCurrentCamera->SetPitch(pitch);

@@ -15,6 +15,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Camera.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\CubeMap.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Device.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\FrameBuffer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\KeyboardEventListener.cpp" />
@@ -35,6 +36,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Camera.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\CubeMap.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Device.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\FrameBuffer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\KeyboardEventListener.h" />
@@ -53,6 +55,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\VAO.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)unit\AssimpLoad.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)unit\CameraTest.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)unit\CubeMapTest.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)unit\FrameBufferTest.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)unit\KeyboardListener.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)unit\MouseListener.h" />

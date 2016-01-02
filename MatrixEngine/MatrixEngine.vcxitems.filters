@@ -75,6 +75,9 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\SceneGraph.cpp">
       <Filter>engine\src</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\CubeMap.cpp">
+      <Filter>engine\src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Camera.h">
@@ -150,6 +153,12 @@
       <Filter>engine\headers</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)unit\CameraTest.h">
+      <Filter>unit\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\CubeMap.h">
+      <Filter>engine\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)unit\CubeMapTest.h">
       <Filter>unit\headers</Filter>
     </ClInclude>
   </ItemGroup>

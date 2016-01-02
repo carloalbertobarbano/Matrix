@@ -146,6 +146,8 @@ namespace MatrixEngine {
 
 			class MeshAsset;
 			class MeshRenderer;
+
+			class CubeMap;
 		}
 	}
 }

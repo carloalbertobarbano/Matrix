@@ -14,6 +14,7 @@ bool RenderPipeline::constructed = false;
 
 Scene::Components::Camera *RenderPipeline::_pCurrentCamera = NULL;
 Graphics::Components::Textures::TextureCube *RenderPipeline::_pCurrentTextureCube = NULL;
+Scene::Components::CubeMap *RenderPipeline::_pCurrentCubeMap = NULL;
 
 bool MatrixEngine::Graphics::RenderPipeline::Construct()
 {

@@ -20,6 +20,8 @@ MatrixEngine::Core::Device::~Device()
 {
 	Log::WriteOnStream("Destroying device..\n", Log::log_stream);
 
+	SDL_Log("\n\n\n\n");
+
 	this->Cleanup();
 
 	Log::error_stream.close();
@@ -37,8 +39,9 @@ void MatrixEngine::Core::Device::Cleanup()
 
 bool MatrixEngine::Core::Device::Construct(Uint32 flags, int glMajorVersion, int glMinorVersion, glm::vec2 resolution, bool fullscreen)
 {
+	SDL_Log("\n\n\n\n");
 	//std::cout << "MatrixEngine::Core::Device(): Constructing OpenGL device.." << std::endl;
-	SDL_Log("MatrixEngine::Core::Device(): Constructing OpenGL device..");
+	Log::WriteOnStream("MatrixEngine::Core::Device(): Constructing OpenGL device..", Log::log_stream);
 
 	Core::_pCurrentDevice = this;
 

@@ -118,25 +118,41 @@ void Scene::Components::MeshAsset::processMesh(aiMesh * ai_mesh, const aiScene *
 	aiColor4D specular;
 	aiColor4D ambient;
 	aiColor4D emissive;
+	aiColor4D reflective;
 
 	int shininess;
+
+	float refraction = 0;
 
 	aiGetMaterialColor(material, AI_MATKEY_COLOR_DIFFUSE, &diffuse);
 	aiGetMaterialColor(material, AI_MATKEY_COLOR_AMBIENT, &ambient);
 	aiGetMaterialColor(material, AI_MATKEY_COLOR_SPECULAR, &specular);
 	aiGetMaterialColor(material, AI_MATKEY_COLOR_EMISSIVE, &emissive);
 	aiGetMaterialInteger(material, AI_MATKEY_SHININESS, &shininess);
-	
+	aiGetMaterialColor(material, AI_MATKEY_COLOR_REFLECTIVE, &reflective);
+	aiGetMaterialFloat(material, AI_MATKEY_REFRACTI, &refraction);
+
+
 	if (emissive.r != 0.0 || emissive.g != 0.0 || emissive.b != 0.0) {
 		ambient = emissive;
 		section->material.emissive = true;
 	}
 
+	int shadingModel;
+	material->Get(AI_MATKEY_SHADING_MODEL, shadingModel);
+	SDL_Log("Shading model: %d\n", shadingModel);
+
 	section->material.ambient = glm::vec4(ambient.r, ambient.g, ambient.b, ambient.a);
 	section->material.diffuse = glm::vec4(diffuse.r, diffuse.g, diffuse.b, diffuse.a);
 	section->material.specular = glm::vec4(specular.r, specular.g, specular.b, specular.a);
 	section->material.shininess = shininess;
-	/* TODO: Emissive materials */
+	
+	if (shadingModel == 2 || reflective.r != 0.0 || reflective.g != 0.0 || reflective.b != 0.0) {
+		SDL_Log("Found reflective material..\n");
+		section->material.reflection = true;
+	}
+
+	section->material.refraction = (refraction != 0 ? true : false);
 
 	SDL_Log("Section %d has %d vertices, %d normals, %d texture coords, %d tangents, %d indices, %d bones\n", 
 			sections.size(), 
