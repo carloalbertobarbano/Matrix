@@ -27,6 +27,8 @@ public:
 	void MoveUp(float dist, float direction);
 
 	void ApplyTransform();
+	
+	void LookAt(vec3 &center, vec3 &up);
 
 	mat4 GetViewMatrixNotRotated(){ return glViewMatrixNotRotated; }
 

@@ -36,12 +36,14 @@ void main() {
 
   if(use_texture == 0) {
     color = mat_diffuse*cosTheta;
+    color.w = mat_ambient.w;
   } else {
     color = mat_ambient*texel + mat_diffuse*cosTheta*texel;
+    color.w = texel.w;
   }
 
   if(emissive == 1)
     color = mat_ambient + mat_diffuse;
 
-  color.w = 1.0;
+  //color.w = 1.0;
 }

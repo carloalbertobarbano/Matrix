@@ -52,6 +52,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\TextureCube.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\VAO.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)unit\AssimpLoad.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)unit\CameraTest.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)unit\FrameBufferTest.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)unit\KeyboardListener.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)unit\MouseListener.h" />

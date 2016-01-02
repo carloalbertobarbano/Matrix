@@ -4,7 +4,7 @@ bool MouseListener::updateCamera = false;
 
 MouseListener::MouseListener()
 {
-	sensibility = 0.01;
+	sensibility = 0.1;
 }
 
 void MouseListener::OnMouseMove(glm::vec2 currPos)

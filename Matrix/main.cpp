@@ -7,6 +7,7 @@
 #include "../MatrixEngine/unit/FrameBufferTest.h"
 #include "../MatrixEngine/unit/AssimpLoad.h"
 #include "../MatrixEngine/unit/SceneGraphTest.h"
+#include "../MatrixEngine/unit/CameraTest.h"
 
 using namespace MatrixEngine;
 using namespace MatrixEngine::Core;
@@ -32,6 +33,7 @@ int main(int argc, char **argv) {
     RunUnitFrameBufferTest();
 	RunUnitAssimpLoad();
     RunUnitSceneGraph();
+	RunUnitCameraTest();
 
 	return 0;
 }

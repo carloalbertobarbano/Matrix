@@ -149,5 +149,8 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\SceneGraph.h">
       <Filter>engine\headers</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)unit\CameraTest.h">
+      <Filter>unit\headers</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

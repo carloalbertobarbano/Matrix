@@ -31,7 +31,7 @@ void RunUnitSceneGraph()
 	meshRendererSidious->Translate(vec3(0.0, -2.0, 0.0));
 
 	std::shared_ptr<Scene::Components::MeshAsset> meshAssetSaber(new Scene::Components::MeshAsset());
-	meshAssetSaber->LoadAsset("data/models/lightsaber.obj");
+	meshAssetSaber->LoadAsset("data/models/lightsaber2.obj");
 	
 	std::shared_ptr<Scene::Components::MeshRenderer> meshRendererSaber(new Scene::Components::MeshRenderer());
 
@@ -48,7 +48,7 @@ void RunUnitSceneGraph()
 
 	glm::vec2 res = Core::_pCurrentDevice->GetResolution();
 	glm::vec3 cameraPos = vec3(0.0, 2.0, 10.0);
-
+	RenderPipeline::glViewMatrix = glm::lookAt(cameraPos, vec3(0.0, 0.0, 0.0), vec3(0.0, 1.0, 0.0));
 	float time = 0.0;
 
 	while (running) {
@@ -63,9 +63,6 @@ void RunUnitSceneGraph()
 
 		RenderPipeline::SwapBuffer();
 
-		//cameraPos.x = sin(time) * 7; // = vec3(5 * cos(time), 2.0, 5 * sin(time));
-		//cameraPos.z = cos(time) * 7 + 3;
-		RenderPipeline::glViewMatrix = glm::lookAt(cameraPos, glm::vec3(0.0, 1.5, 0.0), glm::vec3(0.0, 1.0, 0.0));
 		time = SDL_GetTicks() * 0.1;
 	}
 

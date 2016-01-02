@@ -42,7 +42,7 @@ float Camera::GetYaw()
 
 void Camera::MoveStrafe(float dist, float dir)
 {
-	float rad = (yaw + dir) * PI / 180.0;
+	float rad = glm::radians(yaw + dir);
 	
 	position.x -= sin(rad)*dist;
 	position.z += cos(rad)*dist;
@@ -50,7 +50,7 @@ void Camera::MoveStrafe(float dist, float dir)
 
 void Camera::MoveUp(float dist, float dir)
 {
-	float rad = (pitch + dir) * PI / 180.0;
+	float rad = glm::radians(pitch + dir);
 
 	position.y += sin(rad)*dist;
 }
@@ -58,15 +58,20 @@ void Camera::MoveUp(float dist, float dir)
 void Camera::ApplyTransform()
 {
 	Lock();
-	//RenderPipeline::glViewMatrix = glm::mat4(1.0);
-	RenderPipeline::glViewMatrix = glm::rotate(RenderPipeline::glViewMatrix, pitch, vec3(1.0, 0.0, 0.0));
-	RenderPipeline::glViewMatrix = glm::rotate(RenderPipeline::glViewMatrix, yaw, vec3(0.0, 1.0, 0.0));
+	RenderPipeline::glViewMatrix = glm::mat4(1.0);
+	RenderPipeline::glViewMatrix = glm::rotate(RenderPipeline::glViewMatrix, glm::radians(pitch), vec3(1.0, 0.0, 0.0));
+	RenderPipeline::glViewMatrix = glm::rotate(RenderPipeline::glViewMatrix, glm::radians(yaw), vec3(0.0, 1.0, 0.0));
 	RenderPipeline::glViewMatrix = glm::translate(RenderPipeline::glViewMatrix, position);
 	
 	glViewMatrixNotRotated = mat4(1); // LoadIdentity();
 	glViewMatrixNotRotated = glm::translate(glViewMatrixNotRotated, position);
 
 	RenderPipeline::_pCurrentCamera = this;
+}
+
+void Scene::Components::Camera::LookAt(vec3 & center, vec3 & up)
+{
+	RenderPipeline::glViewMatrix = glm::lookAt(position, center, up);
 }
 
 void Camera::Lock()
