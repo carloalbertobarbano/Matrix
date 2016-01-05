@@ -3,37 +3,23 @@
 
 precision highp float;
 
-in vec3 normal;
-in vec2 tex_coord;
-out vec4 color;
+uniform mat4 modMat;
+uniform vec3 cameraPosition;
+
+out vec4 fragColor;
 
 #include <data/shader/matrix_core.hs>
 #include <data/shader/material_uniforms.hs>
 #include <data/shader/texture_uniforms.hs>
+#include <data/shader/lighting.fs>
 
 void main() {
-  vec3 light_dir = vec3(0.0, 0.5, sin(time * 0.01) * 5);
-
-  vec3 n = normalize(normal);
-  vec3 l = normalize(light_dir);
-  float cosTheta = clamp( dot(n, l), 0, 1);
-
-  vec3 incident = normalize(vec3(0.0, 1.0, 0.5));
-  vec3 reflected = reflect(incident, n);
+  computeLighting();
 
   vec4 texel = getDiffuseTexel();
+  if(use_texture == 0)
+    texel = vec4(1.0);
 
-  if(emissive == 1)
-    cosTheta = 1.0;
-
-  if(use_texture == 0) {
-    color = mat_ambient + mat_diffuse*cosTheta;
-    color.w = mat_ambient.w;
-  } else {
-    color = mat_ambient*texel + mat_diffuse*cosTheta*texel;
-    color.w = texel.w;
-  }
-
-  if(use_reflection == 1)
-    color *= texture(texture_cube, reflected);
+  fragColor =  mat_ambient*texel + vec4(diffuseComponent * texel.rgb, 1.0) + vec4(specularComponent * texel.rgb, 1.0);
+  fragColor.a = texel.a;
 }

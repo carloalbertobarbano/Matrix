@@ -78,8 +78,10 @@ void Scene::Components::MeshRenderer::Render()
 			shader->sendUniform1i(shader->getUniformLocation("texture_cube"), 1);
 		//shader->sendUniform1i(shader->getUniformLocation("texture_bump"), 2);
 
-		//vec3 camera_pos = -MatrixEngine::Scene::Components::_pCurrentCamera->GetPosition();
-		//shader->sendUniform3f(shader->getUniformLocation("camera_position"), camera_pos);
+		vec3 camera_pos = vec3(0.0);
+		if(RenderPipeline::_pCurrentCamera)
+			camera_pos = -RenderPipeline::_pCurrentCamera->GetPosition();
+		shader->sendUniform3f(shader->getUniformLocation("cameraPosition"), camera_pos);
 
 		if (RenderPipeline::ShadeMode == RenderPipeline::COLOR)
 		{

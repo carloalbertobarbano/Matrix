@@ -4,9 +4,9 @@ uniform sampler2D fbo_texture;
 uniform float time;
 
 in vec2 glTexCoord;
-out vec4 color;
+out vec4 fragColor;
 
 void main() {
-  color.xyz = texture( fbo_texture, glTexCoord + 0.005*vec2( sin(time+1024.0*glTexCoord.x),cos(time+768.0*glTexCoord.y)) ).xyz;
-  color.w = 1.0;
+  fragColor.xyz = texture( fbo_texture, glTexCoord + 0.005*vec2( sin(time+1024.0*glTexCoord.x),cos(time+768.0*glTexCoord.y)) ).xyz;
+  fragColor.w = 1.0;
 }

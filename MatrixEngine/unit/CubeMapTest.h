@@ -58,6 +58,8 @@ void RunUnitCubemapTest()
 
 		camera->ApplyTransform();
 		
+		meshRenderer->Rotate(time, 0.0, 1.0, 0.0);
+
 		sceneGraph->RenderScene();
 
 		RenderPipeline::SwapBuffer();

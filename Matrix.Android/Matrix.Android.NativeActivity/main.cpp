@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <SDL2/SDL.h>
+#include <android/log.h>
+
 /*#include "Matrix/Matrix.h"
 
 using namespace MatrixEngine;
@@ -348,8 +350,12 @@ void android_main(struct android_app* state) {
 
 
 int main(int argc, char **argv) {
-	SDL_Log("THIS IS THE MAIN");
+	__android_log_write(ANDROID_LOG_INFO, "MatrixEngine_main", "THIS IS THE MAIN");
+	__android_log_print(ANDROID_LOG_INFO, "MatrixEngine_main", "THIS IS THE MAIN");
 
+	SDL_Init(SDL_INIT_VIDEO);
+	SDL_Log("THIS IS THE MAIN");
+	
 
 	exit(0);
 }

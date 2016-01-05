@@ -75,7 +75,7 @@ Scene::Components::CubeMap::CubeMap()
 			"uniform mat4 viewMat; " \
 			"uniform mat4 modMat; " \
 			"out vec3 tex_coord; " \
-			"void main(){ tex_coord = vertex; gl_Position = projMat * viewMat * modMat * vec4(vertex*10, 1.0); } ");
+			"void main(){ tex_coord = vertex; gl_Position = projMat * viewMat * modMat * vec4(vertex, 1.0); } ");
 
 		shader_frag->InitWithSource(GL_FRAGMENT_SHADER,
 			"#version 330\n" \
@@ -111,10 +111,11 @@ void Scene::Components::CubeMap::LoadTextureCube(std::string * files)
 void Scene::Components::CubeMap::Render()
 {
 	RenderPipeline::_pCurrentCubeMap = this;
-	modMatrix = glm::mat4(1.0);
+	this->BuildModelMatrix();
 	vec3 pos = (RenderPipeline::_pCurrentCamera ? -RenderPipeline::_pCurrentCamera->GetPosition() : vec3(0.0));
 	modMatrix = glm::translate(modMatrix, pos);
-	//modMatrix = glm::scale(modMatrix, glm::vec3(100, 100, 100));
+
+	glDepthMask(GL_FALSE);
 
 	shader->sendUniformMatrix4fv(shader->getUniformLocation("projMat"), 1, GL_FALSE, RenderPipeline::glProjectionMatrix);
 	shader->sendUniformMatrix4fv(shader->getUniformLocation("viewMat"), 1, GL_FALSE, RenderPipeline::glViewMatrix);
@@ -126,6 +127,8 @@ void Scene::Components::CubeMap::Render()
 	vao.DrawArrays(GL_TRIANGLES, 0, 36);
 	shader->unbind();
 	textureCube->UnbindUnit(0);
+
+	glDepthMask(GL_TRUE);
 }
 
 

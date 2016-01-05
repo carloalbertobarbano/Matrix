@@ -125,7 +125,7 @@ void RunUnitAssimpLoad()
 
 	glm::vec2 res = Core::_pCurrentDevice->GetResolution();
 	glm::vec3 cameraPos = vec3(0.0, 2.0, 5.0);
-	glm::mat4 projMat = glm::perspective(glm::radians(60.0f), (float)(res.x / res.y), 0.1f, 100.0f);
+	glm::mat4 projMat = glm::perspective(glm::radians(60.0f), (float)(res.x / res.y), 0.1f, 500.0f);
 	glm::mat4 viewMat = glm::lookAt(cameraPos, glm::vec3(0.0, 0.0, -1.0), glm::vec3(0.0, 1.0, 0.0));
 	glm::mat4 modMat = glm::scale(glm::mat4(1.0f), vec3(0.021));
 	modMat = glm::translate(modMat, vec3(0.0, -2.0, 0.0));
@@ -190,7 +190,7 @@ void RunUnitAssimpLoad()
 	meshRenderer->LoadShader("data/shader/basic.vs", "data/shader/basic.fs");
 
 	cameraPos = vec3(0.0, 2.0, 5.0);
-	RenderPipeline::glProjectionMatrix = glm::perspective(glm::radians(60.0f), (float)(res.x / res.y), 0.1f, 100.0f);
+	RenderPipeline::glProjectionMatrix = glm::perspective(glm::radians(60.0f), (float)(res.x / res.y), 0.1f, 500.0f);
 	RenderPipeline::glViewMatrix = glm::lookAt(cameraPos, glm::vec3(0.0, 0.0, -1.0), glm::vec3(0.0, 1.0, 0.0));
 	meshRenderer->Translate(vec3(0.0, -2.0, 0.0));
 

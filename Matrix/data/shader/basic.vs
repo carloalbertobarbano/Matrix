@@ -7,12 +7,14 @@ uniform mat4 projMat;
 uniform mat4 viewMat;
 uniform mat4 modMat;
 
-out vec3 normal;
-out vec2 tex_coord;
+out vec3 fragVert;
+out vec3 fragNormal;
+out vec2 fragTexCoord;
 
 void main() {
-  normal = norm;
-  tex_coord = tex;
+  fragTexCoord = tex;
+  fragNormal = norm;
+  fragVert = vert;
 
   gl_Position =  projMat * viewMat * modMat * vec4(vert, 1.0);
 }

@@ -51,7 +51,7 @@ void RunUnitCameraTest()
 		camera->ApplyTransform();
 
 		meshRenderer->shader->sendUniform1f(meshRenderer->shader->getUniformLocation("time"), time);
-	
+		
 		sceneGraph->RenderScene();
 
 		RenderPipeline::SwapBuffer();
