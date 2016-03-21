@@ -1,6 +1,6 @@
 {
   "name": "Matrix",
   "tagline": "MatrixEngine reborn",
-  "body": "MatrixEngine is an open source OpenGL engine, which aims to be simple, cross-platform and powerful. It runs on Windows, Linux, OSX and (not yet) Android. It supports modern OpenGL (4.5+) and it's written in C++. \r\n \r\n### See it in action \r\nHere are some screenshots of the engine: \r\n![Assimp model loading and Instanced rendering (OSX)](http://i.imgur.com/2lF7av4.jpg)",
+  "body": "MatrixEngine is an open source OpenGL engine, which aims to be simple, cross-platform and powerful. It runs on Windows, Linux, OSX and (not yet) Android. It supports modern OpenGL (4.5+) and it's written in C++. \r\n \r\n### See it in action \r\nHere are some screenshots of the engine: \r\n![Assimp model loading and Instanced rendering (OSX)](http://i.imgur.com/2lF7av4.jpg)\r\nIt loads models using Assimp. It is capable of instanced rendering. \r\n\r\n![Scene Graph](http://imgur.com/NdYwlAF)\r\nIt also features a Scene Graph. The lightsaber in the picture is a child of the character's mesh.\r\n\r\n![Textures, Materials and First Person Camera](http://imgur.com/9ivTweK)\r\nFirst person camera. Maths done using GLM",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
