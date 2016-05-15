@@ -1,0 +1,150 @@
+!SESSION 2015-12-23 15:37:43.716 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_79
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -application com.microsoft.javapkgsrv.application javapkgsrv-904d4877-0d59-41a5-bbf4-ba1e146ec669
+Command-line arguments:  -consoleLog -application com.microsoft.javapkgsrv.application -data D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\.workspace javapkgsrv-904d4877-0d59-41a5-bbf4-ba1e146ec669
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-12-23 17:05:49.086
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2015-12-24 00:07:16.667 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_79
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -application com.microsoft.javapkgsrv.application javapkgsrv-2a17e2f6-7caf-4ca5-9d9e-06b25c506e3a
+Command-line arguments:  -consoleLog -application com.microsoft.javapkgsrv.application -data D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\.workspace javapkgsrv-2a17e2f6-7caf-4ca5-9d9e-06b25c506e3a
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-12-24 00:07:18.421
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-12-24 01:58:19.234
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2015-12-24 12:36:48.660 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_79
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -application com.microsoft.javapkgsrv.application javapkgsrv-29b194f7-89f1-46d5-b243-5e1078ffcb25
+Command-line arguments:  -consoleLog -application com.microsoft.javapkgsrv.application -data D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\.workspace javapkgsrv-29b194f7-89f1-46d5-b243-5e1078ffcb25
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-12-24 12:36:50.134
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-12-24 12:40:43.252
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2015-12-24 12:41:01.738 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_79
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -application com.microsoft.javapkgsrv.application javapkgsrv-de84f7c4-7da8-477a-8dc6-a7457762cebd
+Command-line arguments:  -consoleLog -application com.microsoft.javapkgsrv.application -data D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\.workspace javapkgsrv-de84f7c4-7da8-477a-8dc6-a7457762cebd
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-12-24 12:41:02.872
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-12-24 15:01:13.793
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2015-12-24 18:16:37.969 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_79
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -application com.microsoft.javapkgsrv.application javapkgsrv-3abe99dd-75f0-4540-b6b9-66e775d1375f
+Command-line arguments:  -consoleLog -application com.microsoft.javapkgsrv.application -data D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\.workspace javapkgsrv-3abe99dd-75f0-4540-b6b9-66e775d1375f
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-12-24 18:16:39.421
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-12-24 18:47:27.406
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2015-12-25 02:10:33.477 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_79
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -application com.microsoft.javapkgsrv.application javapkgsrv-a709957e-4dd9-4d95-8ac0-bffac7cd51bf
+Command-line arguments:  -consoleLog -application com.microsoft.javapkgsrv.application -data D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\.workspace javapkgsrv-a709957e-4dd9-4d95-8ac0-bffac7cd51bf
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-12-25 02:10:34.853
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-12-25 02:16:07.422
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2015-12-25 02:20:41.614 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_79
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -application com.microsoft.javapkgsrv.application javapkgsrv-7ed6bd82-6dce-4eae-9ffd-85a7cf407362
+Command-line arguments:  -consoleLog -application com.microsoft.javapkgsrv.application -data D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\.workspace javapkgsrv-7ed6bd82-6dce-4eae-9ffd-85a7cf407362
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-12-25 02:20:42.968
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-12-25 02:37:51.934
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2015-12-25 02:38:34.354 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_79
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -application com.microsoft.javapkgsrv.application javapkgsrv-5cce8985-5946-4d8c-9761-3f59958b3d65
+Command-line arguments:  -consoleLog -application com.microsoft.javapkgsrv.application -data D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\.workspace javapkgsrv-5cce8985-5946-4d8c-9761-3f59958b3d65
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-12-25 02:38:35.712
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-12-25 03:10:27.480
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2015-12-25 11:05:46.091 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_79
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -application com.microsoft.javapkgsrv.application javapkgsrv-e2f2de8a-69d3-4a0f-bf80-b5dd379a6ece
+Command-line arguments:  -consoleLog -application com.microsoft.javapkgsrv.application -data D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\.workspace javapkgsrv-e2f2de8a-69d3-4a0f-bf80-b5dd379a6ece
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-12-25 11:05:47.513
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-12-25 11:31:37.848
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2015-12-26 13:24:53.089 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_79
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -application com.microsoft.javapkgsrv.application javapkgsrv-93eb1a2f-114e-44d8-a990-f84e47c1e2ce
+Command-line arguments:  -consoleLog -application com.microsoft.javapkgsrv.application -data D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\.workspace javapkgsrv-93eb1a2f-114e-44d8-a990-f84e47c1e2ce
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-12-26 13:24:54.922
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-12-26 14:13:48.287
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2015-12-26 19:39:07.981 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_79
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -application com.microsoft.javapkgsrv.application javapkgsrv-cea2b419-99ea-4f29-823e-873f42eb805f
+Command-line arguments:  -consoleLog -application com.microsoft.javapkgsrv.application -data D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\.workspace javapkgsrv-cea2b419-99ea-4f29-823e-873f42eb805f
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-12-26 19:39:09.649
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-12-27 00:23:24.870
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2015-12-27 14:12:51.029 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_79
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -application com.microsoft.javapkgsrv.application javapkgsrv-daae8a6f-21aa-40f1-98c1-e40037f610c4
+Command-line arguments:  -consoleLog -application com.microsoft.javapkgsrv.application -data D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\.workspace javapkgsrv-daae8a6f-21aa-40f1-98c1-e40037f610c4
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-12-27 14:12:52.995
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.

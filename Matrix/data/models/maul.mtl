@@ -1,0 +1,60 @@
+# Blender MTL File: 'None'
+# Material Count: 5
+
+newmtl playerMaulKiller_playermaulkiller_playermaulkillerBodyA_mat
+Ns 10.000000
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd playerMaulKillerBodyA_C.jpg
+map_Bump playerMaulKillerBodyA_N.jpg
+
+newmtl playerMaulKiller_playermaulkiller_playermaulkillerBodyB_mat
+Ns 10.000000
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd playerMaulKillerBodyB_C.jpg
+map_Bump playerMaulKillerBodyB_N.jpg
+
+newmtl playerMaulKiller_playermaulkiller_playermaulkillerEyeLash_mat
+Ns 10.000000
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd playerMaulKillerEyelash_C.jpg
+
+newmtl playerMaulKiller_playermaulkiller_playermaulkillerEyeball_mat
+Ns 10.000000
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd playerMaulKillerEyeBall_C.jpg
+
+newmtl playerMaulKiller_playermaulkiller_playermaulkillerHead_mat
+Ns 10.000000
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd playerMaulKillerHead_C.jpg
+map_Bump playerMaulKillerHead_N.jpg

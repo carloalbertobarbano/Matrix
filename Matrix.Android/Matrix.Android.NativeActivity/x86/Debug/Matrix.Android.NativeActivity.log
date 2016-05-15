@@ -1,0 +1,12 @@
+﻿  ANDROID_HOME=C:\Program Files (x86)\Android\android-sdk
+  ANT_HOME=C:\Program Files (x86)\Microsoft Visual Studio 14.0\Apps\apache-ant-1.9.3\
+  JAVA_HOME=C:\Program Files\Java\jdk1.7.0_79
+  NDK_ROOT=C:\ProgramData\Microsoft\AndroidNDK\android-ndk-r10e\
+  pch.h
+  Camera.cpp
+  In file included from D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\MatrixEngine\Matrix\Camera.cpp:1:
+  In file included from D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\MatrixEngine\Matrix/Camera.h:4:
+D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\MatrixEngine\Matrix/matrix_engine_internal.h(23,10): fatal error : 'glm/glm.hpp' file not found
+  #include <glm/glm.hpp>
+           ^
+  1 error generated.

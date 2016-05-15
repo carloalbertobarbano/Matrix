@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <SOLibPaths />
+  <OObjPaths />
+  <Configuration />
+  <Platform />
+  <AndroidArchitecture />
+  <!--links to other recipe files-->
+  <RecipeFiles>D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\ARM\Debug\libmain.so.recipe</RecipeFiles>
+</project>

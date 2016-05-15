@@ -1,0 +1,12 @@
+D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\ARM64\Debug\Matrix_Android.apk.recipe
+D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\ARM64\Debug\Matrix_Android.apk.recipe.merged
+D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\ARM64\Debug\Package\libs\arm64-v8a\libMatrix_Android.so
+D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\ARM64\Debug\Package\libs\arm64-v8a\gdbserver
+D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\ARM64\Debug\Package\libs\arm64-v8a\libgnustl_static.a
+D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\ARM64\Debug\Package\res\values\strings.xml
+D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\ARM64\Debug\Package\AndroidManifest.xml
+D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\ARM64\Debug\Package\project.properties
+D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\ARM64\Debug\Package\build.xml
+D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\ARM64\Debug\Matrix_Android.apk
+D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\ARM64\Debug\Matrix_Android.lastsuccessfuldeploy
+D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\Matrix.Android\Matrix.Android.Packaging\ARM64\Debug\FileStringReplace.incremental

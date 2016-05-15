@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <SOLibPaths>D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\ARM64\Debug\libMatrix_Android.so;C:\ProgramData\Microsoft\AndroidNDK\android-ndk-r10e\prebuilt\android-arm64\gdbserver\gdbserver;C:\ProgramData\Microsoft\AndroidNDK\android-ndk-r10e\sources\cxx-stl\gnu-libstdc++\4.9\libs\arm64-v8a\libgnustl_static.a</SOLibPaths>
+  <OObjPaths>D:\Users\carlo\Documents\Visual Studio 2015\Projects\Matrix\Matrix.Android\Matrix.Android.NativeActivity\ARM64\Debug</OObjPaths>
+  <Configuration>Debug</Configuration>
+  <Platform>ARM64</Platform>
+  <AndroidArchitecture>arm64-v8a</AndroidArchitecture>
+</project>
