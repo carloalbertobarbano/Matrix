@@ -3,5 +3,6 @@
   JAVA_HOME=C:\Program Files\Java\jdk1.7.0_79
   NDK_ROOT=C:\ProgramData\Microsoft\AndroidNDK\android-ndk-r10e\
 C:\ProgramData\Microsoft\AndroidNDK\android-ndk-r10e\toolchains\x86_64-4.9\prebuilt\windows/lib/gcc/x86_64-linux-android/4.9/../../../../x86_64-linux-android/bin\ld.exe : error : cannot find -lSDL2
-main.cpp(352): error : undefined reference to 'SDL_Log'
+main.cpp(356): error : undefined reference to 'SDL_Init'
+main.cpp(357): error : undefined reference to 'SDL_Log'
 clang.exe : error : linker command failed with exit code 1 (use -v to see invocation)

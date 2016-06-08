@@ -1,165 +1,213 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="engine">
-      <UniqueIdentifier>{1388f6e1-c6c0-4fd2-bbd0-1f9e8a3754cb}</UniqueIdentifier>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{b6b294b2-e2cc-4f78-8f3d-4c406c484556}</UniqueIdentifier>
     </Filter>
-    <Filter Include="engine\headers">
-      <UniqueIdentifier>{fa78286a-e21b-4b6e-b1ed-26d62a01c6a6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="engine\src">
-      <UniqueIdentifier>{5efaeee6-1167-41f2-83c4-868ea781064e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="unit">
+    <Filter Include="Units">
       <UniqueIdentifier>{35048123-9a77-4a3c-82b3-d40c48b804b0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="unit\headers">
+    <Filter Include="Units\headers">
       <UniqueIdentifier>{73fa2dec-6655-4466-b907-46e68e04040b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="unit\src">
+    <Filter Include="Units\src">
       <UniqueIdentifier>{30ab2683-45c0-448f-8e00-80faccad053f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Core">
+      <UniqueIdentifier>{29c5ed51-ded0-4711-9c69-a65200a7ff6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Graphics">
+      <UniqueIdentifier>{1da7f6f3-979b-4f74-8c59-f5a1614f7118}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Scene">
+      <UniqueIdentifier>{9c2d5c98-9050-43bd-84c2-6807b9c5a4df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Core\IO">
+      <UniqueIdentifier>{5c5bf7d1-e7e3-41b2-bcba-40078ac1a2a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Core\IO\DeviceListener">
+      <UniqueIdentifier>{207ec0e8-f9ee-4cf6-a4aa-afc281e0fb57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Core\IO\Log">
+      <UniqueIdentifier>{89f79e5d-2ab0-4b54-b25b-b322e7c4500d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Graphics\Components">
+      <UniqueIdentifier>{f86d065c-486c-49b6-b56c-75930d9bade8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Graphics\Memory">
+      <UniqueIdentifier>{1af28943-c949-419e-9232-9a0eae70c02d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Graphics\Shaders">
+      <UniqueIdentifier>{e5698cb9-6af9-4359-90fb-9d95abecf25f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Graphics\UI">
+      <UniqueIdentifier>{173d9976-bc5e-4d54-9fae-de93377b07c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Graphics\Utils">
+      <UniqueIdentifier>{bfeebfff-5c69-459c-b041-5499ece617c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Graphics\Components\Materials">
+      <UniqueIdentifier>{5eab8fbe-63c0-4746-9dc2-ed1f4c23e092}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Graphics\Components\Textures">
+      <UniqueIdentifier>{701f920e-b5ef-4d2c-90b7-4aa05d50f3bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Graphics\Shaders\Presets">
+      <UniqueIdentifier>{d67c9979-229f-4854-814c-a4d1b073c8d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Scene\Components">
+      <UniqueIdentifier>{80eb17b1-c3fa-4dfb-82ce-e0cdbc18cd1a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Camera.cpp">
-      <Filter>engine\src</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Device.cpp">
-      <Filter>engine\src</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\FrameBuffer.cpp">
-      <Filter>engine\src</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\KeyboardEventListener.cpp">
-      <Filter>engine\src</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\matrix_engine_internal.cpp">
-      <Filter>engine\src</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\MouseEventListener.cpp">
-      <Filter>engine\src</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\RenderPipeline.cpp">
-      <Filter>engine\src</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Shader.cpp">
-      <Filter>engine\src</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Texture.cpp">
-      <Filter>engine\src</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\TextureCube.cpp">
-      <Filter>engine\src</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\VAO.cpp">
-      <Filter>engine\src</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)unit\MouseListener.cpp">
-      <Filter>unit\src</Filter>
+      <Filter>Units\src</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)unit\Primitives.cpp">
-      <Filter>unit\src</Filter>
+      <Filter>Units\src</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\MeshAsset.cpp">
-      <Filter>engine\src</Filter>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\matrix_engine_internal.cpp">
+      <Filter>Engine</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Material.cpp">
-      <Filter>engine\src</Filter>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Core\Device.cpp">
+      <Filter>Engine\Core</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\MeshRenderer.cpp">
-      <Filter>engine\src</Filter>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Core\IO\DeviceListener\KeyboardEventListener.cpp">
+      <Filter>Engine\Core\IO\DeviceListener</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\SceneEntity.cpp">
-      <Filter>engine\src</Filter>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Core\IO\DeviceListener\MouseEventListener.cpp">
+      <Filter>Engine\Core\IO\DeviceListener</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\SceneGraph.cpp">
-      <Filter>engine\src</Filter>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Graphics\RenderPipeline.cpp">
+      <Filter>Engine\Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\CubeMap.cpp">
-      <Filter>engine\src</Filter>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Graphics\Components\FrameBuffer.cpp">
+      <Filter>Engine\Graphics\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Graphics\Components\Materials\Material.cpp">
+      <Filter>Engine\Graphics\Components\Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Graphics\Components\Textures\Texture.cpp">
+      <Filter>Engine\Graphics\Components\Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Graphics\Components\Textures\TextureCube.cpp">
+      <Filter>Engine\Graphics\Components\Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Graphics\Memory\VAO.cpp">
+      <Filter>Engine\Graphics\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Graphics\Shaders\Shader.cpp">
+      <Filter>Engine\Graphics\Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Scene\SceneEntity.cpp">
+      <Filter>Engine\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Scene\SceneGraph.cpp">
+      <Filter>Engine\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Scene\Components\Camera.cpp">
+      <Filter>Engine\Scene\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Scene\Components\CubeMap.cpp">
+      <Filter>Engine\Scene\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Scene\Components\Light.cpp">
+      <Filter>Engine\Scene\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Scene\Components\MeshAsset.cpp">
+      <Filter>Engine\Scene\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Matrix\Scene\Components\MeshRenderer.cpp">
+      <Filter>Engine\Scene\Components</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Camera.h">
-      <Filter>engine\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Device.h">
-      <Filter>engine\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\FrameBuffer.h">
-      <Filter>engine\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\KeyboardEventListener.h">
-      <Filter>engine\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Matrix.h">
-      <Filter>engine\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\matrix_engine_internal.h">
-      <Filter>engine\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\MouseEventListener.h">
-      <Filter>engine\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\RenderPipeline.h">
-      <Filter>engine\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Shader.h">
-      <Filter>engine\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Texture.h">
-      <Filter>engine\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\TextureCube.h">
-      <Filter>engine\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\VAO.h">
-      <Filter>engine\headers</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)unit\FrameBufferTest.h">
-      <Filter>unit\headers</Filter>
+      <Filter>Units\headers</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)unit\KeyboardListener.h">
-      <Filter>unit\headers</Filter>
+      <Filter>Units\headers</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)unit\MouseListener.h">
-      <Filter>unit\headers</Filter>
+      <Filter>Units\headers</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)unit\Primitives.h">
-      <Filter>unit\headers</Filter>
+      <Filter>Units\headers</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)unit\ShaderLoad.h">
-      <Filter>unit\headers</Filter>
+      <Filter>Units\headers</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)unit\AssimpLoad.h">
-      <Filter>unit\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\MeshAsset.h">
-      <Filter>engine\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\MeshRenderer.h">
-      <Filter>engine\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Material.h">
-      <Filter>engine\headers</Filter>
+      <Filter>Units\headers</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)unit\SceneGraphTest.h">
-      <Filter>unit\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\SceneEntity.h">
-      <Filter>engine\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\SceneGraph.h">
-      <Filter>engine\headers</Filter>
+      <Filter>Units\headers</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)unit\CameraTest.h">
-      <Filter>unit\headers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\CubeMap.h">
-      <Filter>engine\headers</Filter>
+      <Filter>Units\headers</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)unit\CubeMapTest.h">
-      <Filter>unit\headers</Filter>
+      <Filter>Units\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)unit\Animation.h">
+      <Filter>Units\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Matrix.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\matrix_engine_internal.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Core\Device.h">
+      <Filter>Engine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Core\IO\DeviceListener\KeyboardEventListener.h">
+      <Filter>Engine\Core\IO\DeviceListener</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Core\IO\DeviceListener\MouseEventListener.h">
+      <Filter>Engine\Core\IO\DeviceListener</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Graphics\RenderPipeline.h">
+      <Filter>Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Graphics\Components\FrameBuffer.h">
+      <Filter>Engine\Graphics\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Graphics\Components\Materials\Material.h">
+      <Filter>Engine\Graphics\Components\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Graphics\Components\Textures\Texture.h">
+      <Filter>Engine\Graphics\Components\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Graphics\Components\Textures\TextureCube.h">
+      <Filter>Engine\Graphics\Components\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Graphics\Memory\VAO.h">
+      <Filter>Engine\Graphics\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Graphics\Shaders\Shader.h">
+      <Filter>Engine\Graphics\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Scene\SceneEntity.h">
+      <Filter>Engine\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Scene\SceneGraph.h">
+      <Filter>Engine\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Scene\Components\Camera.h">
+      <Filter>Engine\Scene\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Scene\Components\CubeMap.h">
+      <Filter>Engine\Scene\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Scene\Components\Light.h">
+      <Filter>Engine\Scene\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Scene\Components\MeshAsset.h">
+      <Filter>Engine\Scene\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Matrix\Scene\Components\MeshRenderer.h">
+      <Filter>Engine\Scene\Components</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

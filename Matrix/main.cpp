@@ -9,6 +9,7 @@
 #include "../MatrixEngine/unit/SceneGraphTest.h"
 #include "../MatrixEngine/unit/CameraTest.h"
 #include "../MatrixEngine/unit/CubeMapTest.h"
+#include "../MatrixEngine/unit/Animation.h"
 
 using namespace MatrixEngine;
 using namespace MatrixEngine::Core;
@@ -24,18 +25,19 @@ int main(int argc, char **argv) {
 	GLDevice->EnableVSync();
 
 	std::shared_ptr<KeyboardListener> keyboardListener(new KeyboardListener());
-	Core::_pCurrentDevice->RegisterKeyboardListener(keyboardListener);
+	Core::_pCurrentDevice->RegisterKeyboardListener(keyboardListener); 
 
 	std::shared_ptr<MouseListener> mouseListener(new MouseListener());
 	Core::_pCurrentDevice->RegisterMouseListener(mouseListener);
 
 	RenderPipeline::Construct();
 
-    RunUnitFrameBufferTest();
-	RunUnitAssimpLoad();
-    RunUnitSceneGraph();
-	RunUnitCameraTest();
-	RunUnitCubemapTest();
+    //RunUnitFrameBufferTest();
+	//RunUnitAssimpLoad();
+    //RunUnitSceneGraph();
+	//RunUnitCameraTest();
+	//RunUnitCubemapTest();
+	RunUnitAnimation();
 
 	return 0;
 }

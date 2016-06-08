@@ -111,26 +111,34 @@ namespace MatrixEngine {
 			namespace Materials {
 				class Material;
 			}
-
-			namespace Lights {
-				class Light;
-			}
 		}
 
 		namespace Memory {
 			class VAO;
 		}
 
-
-		namespace Shader {
+		namespace Shaders {
 			class ShaderSource;
 			class ShaderProgram;
+
+			namespace Presets {
+				extern ShaderProgram* colorShader();
+				extern ShaderProgram* passthroughShader();
+				extern ShaderProgram* defaultShader();
+			}
 		}
 
 		namespace UI {
 			class Container;
 			class Button;
 			class Slider;
+		}
+
+		namespace Utils {
+			namespace Primitives {
+				extern void DrawTriangle();
+				extern void DrawCube();
+			}
 		}
 	}
 
@@ -143,7 +151,7 @@ namespace MatrixEngine {
 
 		namespace Components {
 			class Camera;
-
+			class Light;
 			class MeshAsset;
 			class MeshRenderer;
 

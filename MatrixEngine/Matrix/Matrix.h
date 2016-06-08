@@ -2,25 +2,26 @@
 #define MATRIX_H
 
 #include "matrix_engine_internal.h"
-#include "Device.h"
-#include "KeyboardEventListener.h"
-#include "MouseEventListener.h"
 
-#include "Camera.h"
+#include "Core/Device.h"
+#include "Core/IO/DeviceListener/KeyboardEventListener.h"
+#include "Core/IO/DeviceListener/MouseEventListener.h"
 
-#include "RenderPipeline.h"
-#include "Shader.h"
+#include "Scene/Components/Camera.h"
 
-#include "Texture.h"
-#include "TextureCube.h"
-#include "FrameBuffer.h"
+#include "Graphics/RenderPipeline.h"
+#include "Graphics/Shaders/Shader.h"
 
-#include "SceneGraph.h"
-#include "SceneEntity.h"
+#include "Graphics/Components/Textures/Texture.h"
+#include "Graphics/Components/Textures/TextureCube.h"
+#include "Graphics/Components/FrameBuffer.h"
 
-#include "MeshAsset.h"
-#include "MeshRenderer.h"
+#include "Scene/SceneGraph.h"
+#include "Scene/SceneEntity.h"
 
-#include "CubeMap.h"
+#include "Scene/Components/MeshAsset.h"
+#include "Scene/Components/MeshRenderer.h"
+#include "Scene/Components/CubeMap.h"
+#include "Scene/Components/Light.h"
 
 #endif

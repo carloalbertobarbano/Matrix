@@ -7,7 +7,7 @@
 using namespace MatrixEngine;
 using namespace MatrixEngine::Core;
 using namespace MatrixEngine::Graphics;
-using namespace MatrixEngine::Graphics::Shader;
+using namespace MatrixEngine::Graphics::Shaders;
 
 extern void DrawTriangle();
 extern void DrawCube();

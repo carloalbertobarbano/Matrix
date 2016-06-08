@@ -182,6 +182,49 @@ void RunUnitAssimpLoad()
 
 	running = true;
 
+	std::shared_ptr<Scene::Components::MeshAsset> asset(new Scene::Components::MeshAsset());
+	std::vector< std::shared_ptr<Scene::Components::MeshRenderer> > renderer;
+	
+	asset->LoadAsset("data/models/Stormtrooper.obj");
+
+	for (int x = -5; x < 5; x++)
+		for (int z = 0; z < 10; z++) {
+			renderer.push_back(std::shared_ptr<Scene::Components::MeshRenderer>(new Scene::Components::MeshRenderer()));
+			renderer.back()->SetMeshAsset(asset);
+			renderer.back()->LoadShader("data/shader/basic.vs", "data/shader/basic.fs");
+		}	
+
+	cameraPos = vec3(0.0, 2.0, 5.0);
+	RenderPipeline::glProjectionMatrix = glm::perspective(glm::radians(60.0f), (float)(res.x / res.y), 0.1f, 500.0f);
+	RenderPipeline::glViewMatrix = glm::lookAt(cameraPos, glm::vec3(0.0, 0.0, -1.0), glm::vec3(0.0, 1.0, 0.0));
+
+	while (running) {
+		Core::_pCurrentDevice->HandleInput();
+
+		RenderPipeline::ClearScreen(vec4(0.0, 0.0, 0.5, 1.0));
+		//RenderPipeline::PrepareForRendering();
+
+		cubemap->Render();
+
+		int i = 0;
+		for (int x = -5; x < 5; x++)
+			for (int z = 0; z < 10; z++) {
+				renderer[i]->Translate(vec3(x*2.5, -2.0, -z * 2));
+				renderer[i]->Rotate(time * 0.5, 0.0, 1.0, 0.0);
+				renderer[i++]->Render();
+			}
+
+		RenderPipeline::SwapBuffer();
+
+		//cameraPos.x = sin(time) * 5;
+		//cameraPos.z = cos(time) * 15 - 10;
+		//RenderPipeline::glViewMatrix = glm::lookAt(cameraPos, glm::vec3(0.0, 1.5, 0.0), glm::vec3(0.0, 1.0, 0.0));
+		//meshRenderer->Rotate(time * 0.5, 0.0, 1.0, 0.0);
+		time = SDL_GetTicks() * 0.1;
+	}
+
+	running = true;
+
 	std::shared_ptr<Scene::Components::MeshAsset> meshAsset(new Scene::Components::MeshAsset());
 	std::shared_ptr<Scene::Components::MeshRenderer> meshRenderer(new Scene::Components::MeshRenderer());
 
